@@ -1,7 +1,5 @@
 ---
 title: Field Names
-parent: 683079
-child_order: 3
 ---
 
 # Field Names
@@ -22,17 +20,17 @@ To control line spacing and indentation, you can create multiple fields with the
 
 In the following example, `extension_reason` is a single field in the API request, but the text will automatically wrap across lines 0 to 5.
 
-![Multiline Field Names](../../images/template_editor/multiline-name-example.jpg#margin=1rem)
+![Multiline Field Names](./multiline-name-example.jpg)
 
 > Note: You can also create a simple multiline field by adjusting your field height to fit multiple lines, and checking `Multiline` in the field options:
 
-![Multiline Checkbox](../../images/template_editor/multiline-checkbox.png)
+![Multiline Checkbox](./multiline-checkbox.png)
 
 ## Duplicate Names
 
 You can use the same field name more than once. For example, some forms have separate fields for month, day, and year. You can configure three fields that all share the name `date`, but use different format strings for each field: `%-m` for month, `%-d` for day, and `%Y` for year.
 
-![Day/Month/Year example](../../images/template_editor/day-month-year.png#margin=1rem)
+![Day/Month/Year example](./day-month-year.png)
 
 Now you can send a single `date` value in your API request, and we will show a date picker on the online form.
 

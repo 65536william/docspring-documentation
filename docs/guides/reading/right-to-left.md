@@ -1,9 +1,5 @@
 ---
 title: Right-to-left Languages
-has_children: true
-id: 990843
-order: 3
-child_order: 1
 ---
 
 # Right-to-left Languages
@@ -18,6 +14,6 @@ When setting up a PDF template that uses a right-to-left language, you will prob
 
 Here is an example PDF we generated that includes both Hebrew and English text:
 
-![Hebrew and English](../../images/hebrew-and-english.png#margin=1rem)
+![Hebrew and English](./hebrew-and-english.png)
 
 

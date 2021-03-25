@@ -1,7 +1,5 @@
 ---
 title: Visual Forms JS Library
-parent: 355298
-child_order: 2
 ---
 
 # Visual Forms JS Library
@@ -9,7 +7,7 @@ child_order: 2
 This JS library allows you to embed a visual form on your own website.
 
 This is a low-level form library that renders the visual form directly on a page.
-It is used internally by the [Data Requests](../../../api/create-data-requests) library to show the signing form inside an iframe.
+It is used internally by the [Data Requests](../../api/create-data-request) library to show the signing form inside an iframe.
 
 Please note: The visual forms library does not provide any security features or audit trail logging, so please use the data requests library if you need to collect legally binding signatures.
 
@@ -51,7 +49,7 @@ Please note: The visual forms library does not provide any security features or 
 
 ### 2.3.8 (Sep 9, 2020)
 
-- _For [Data Request](../../../api/create-data-requests) users:_ Added support for all `field_overrides` (from the [Generate PDF](../../../api/generate-a-pdf) API requests), so that field options can be configured dynamically for each data request.
+- _For [Data Request](../../api/create-data-request) users:_ Added support for all `field_overrides` (from the [Generate PDF](../../api/generate-a-pdf) API requests), so that field options can be configured dynamically for each data request.
 
 ### 2.3.7 (Aug 7, 2020)
 

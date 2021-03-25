@@ -1,7 +1,5 @@
 ---
 title: Field Display Types
-parent: 683079
-child_order: 5
 ---
 
 # Field Display Types
@@ -28,7 +26,7 @@ When checked, the field is divided into equally spaced boxes, or "combs", and on
 
 DocSpring will display the lines that divide each cell:
 
-![Three SSN Fields with Comb options](../../images/template_editor/three-ssn-fields-with-comb.png#margin=1rem)
+![Three SSN Fields with Comb options](./three-ssn-fields-with-comb.png)
 
 DocSpring will display the lines that divide each cell, and these lines can be useful when you're not sure how many cells are in a field. For larger comb fields, continue incrementing the "Comb Cells" value until all of the lines match up.
 
@@ -48,13 +46,13 @@ DocSpring will display the lines that divide each cell, and these lines can be u
 
 You can configure the check character, color, and opacity.
 
-![Check Options](../../images/template_editor/check-options.png#margin=1rem)
+![Check Options](./check-options.png)
 
 ## Shape
 
 You can configure a fill, border, or both. You can also configure the border width, and opacity.
 
-![Shape Options](../../images/template_editor/shape-options.png#margin=1rem)
+![Shape Options](./shape-options.png)
 
 ## Image
 
@@ -62,40 +60,40 @@ You can configure a fill, border, or both. You can also configure the border wid
 
 Images can be scaled to fit, scaled to fill, or stretched to fill the field dimensions.
 
-![Image Scaling Options](../../images/template_editor/image-scaling-options.png#margin=1rem)
+![Image Scaling Options](./image-scaling-options.png)
 
-![Image Scaling Examples](../../images/template_editor/image-scaling-examples.jpg#margin=1rem)
+![Image Scaling Examples](./image-scaling-examples.jpg)
 
 ### Scale Gravity
 
 When you choose "scale to fit" or "scale to fill", you can configure the "gravity".
 This lets you control the image position (for "fit"), or which part of the image is cropped (for "fill").
 
-![Scale Gravity Options](../../images/template_editor/scale-gravity-options.png#margin=1rem)
+![Scale Gravity Options](./scale-gravity-options.png)
 
-![Scale Gravity Examples](../../images/template_editor/scale-gravity-examples.jpg#margin=1rem)
+![Scale Gravity Examples](./scale-gravity-examples.jpg)
 
-See the [Image Data Type](./field-data-types) section for information about images.
+See the [Image Data Type](./field-data-types.md#image) section for information about images.
 
 ## QR Code
 
-[_Strings_](./field-data-types),
-[_Emails_](./field-data-types), and
-[_URLs_](./field-data-types)
+[_Strings_](./field-data-types.md#strings),
+[_Emails_](./field-data-types.md#emails), and
+[_URLs_](./field-data-types.md#urls)
 can be displayed as QR Codes.
 
-![QR Code](../../images/template_editor/qr-code.png#margin=1rem)
+![QR Code](./qr-code.png)
 
 ## Barcode
 
 The following field data types can be displayed as barcodes:
-[_Barcode_](./field-data-types),
-[_String_](./field-data-types),
-[_Email_](./field-data-types), and
-[_URL_](./field-data-types).
+[_Barcode_](./field-data-types.md#barcode),
+[_String_](./field-data-types.md#string),
+[_Email_](./field-data-types.md#email), and
+[_URL_](./field-data-types.md#url).
 
 > Note that the _Barcode_ data type can also be displayed as plain text.
 
 _Strings_, _Emails_, and _URLs_ use the `Code 128` symbology, which supports any ASCII character.
 
-![Barcode](../../images/template_editor/barcode.png#margin=1rem)
+![Barcode](./barcode.png)

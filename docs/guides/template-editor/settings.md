@@ -1,7 +1,5 @@
 ---
 title: Template Settings
-parent: 683079
-child_order: 9
 ---
 
 # Template Settings
@@ -19,7 +17,7 @@ The _Expire Submissions_ setting allows you to configure a data retention policy
 
 (Please note that electronic signatures and a SHA256 hash of the PDF are always retained for UETA and ESIGN compliance.)
 
-You can also [make an API request](../../../api/generate-a-pdf/expire-submission.md) to immediately expire a submission.
+You can also [make an API request](../../api/generate-a-pdf/expire-submission) to immediately expire a submission.
 
 ## Allow Additional Properties
 
@@ -35,7 +33,7 @@ Set this to **Public** to allow anyone to fill out the online form if they have 
 
 Set this to **Public** to allow anyone to view submission data and download their PDF if they have the URL.
 
-This is useful when you have added a [@@data_url QR code to the PDF](./field_names.md#special-field-names).
+This is useful when you have added a [@@data_url QR code to the PDF](./field-names.md#special-field-names).
 (`@@data_url` is a URL where the submission data can be viewed or downloaded.)
 
 ## Webhook URL
@@ -90,5 +88,5 @@ and paste the URL into this field. We'll send a message whenever a PDF is genera
 
 We'll redirect users to this URL whenever they fill out the online form to generate a PDF.
 This applies to online forms hosted on [docspring.com](https://docspring.com),
-and [embedded forms on your own website](../../web-forms/embedded-forms).
+and [embedded forms on your own website](../web-forms/embedded-forms).
 The submission ID, template ID, and template name will be appended to the URL as query params.

@@ -1,12 +1,10 @@
 ---
 title: Formulas
-parent: 683079
-child_order: 8
 ---
 
 # Formulas
 
-A [_Number_](./field-data-types) field can be a formula that performs a calculation. Formulas can reference other _Number_ fields. Formulas are configured in the _default_ or _static_ value for a _Number_ field.
+A [_Number_](./field-data-types.md#number) field can be a formula that performs a calculation. Formulas can reference other _Number_ fields. Formulas are configured in the _default_ or _static_ value for a _Number_ field.
 
 > Note: You can configure formulas in your template, but your API request can only contain numbers.
 
@@ -45,7 +43,7 @@ not be part of the API schema, and it is not displayed on the PDF.
 
 Here's an example template that demonstrates a number of different features.
 
-![Multiline Field Names](../../images/template_editor/formula-example-01.png#margin=1rem)
+![Multiline Field Names](./formula-example-01.png)
 
 | Field Name | Required? | Static? | Default or Static value |
 | ---------- | --------- | ------- | ----------------------- |
@@ -70,4 +68,4 @@ Given the following values:
 
 The generated PDF will show the following results:
 
-![Multiline Field Names](../../images/template_editor/formula-example-02.png#margin=1rem)
+![Multiline Field Names](./formula-example-02.png)

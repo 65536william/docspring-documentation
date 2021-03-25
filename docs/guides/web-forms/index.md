@@ -1,9 +1,5 @@
 ---
 title: Web Forms
-has_children: true
-id: 786704
-order: 4
-child_order: 1
 ---
 
 # Web Forms
@@ -22,7 +18,7 @@ When this is set to "Private", the user can save the form, but they will not be 
 
 When "Submission Privacy" is set to "Public", the user can wait until the PDF has been processed, and you can show them a link to download the PDF.
 
-![Privacy](../../images/template_editor/privacy-settings.png#margin=1rem)
+![Privacy](./privacy-settings.png)
 
 ## Query Params
 
@@ -108,10 +104,10 @@ You can display a custom logo at the top of hosted web forms.
 
 [Visit the Account page](https://app.docspring.com/account), click the "Choose File" button under "Logo for Web Forms", then select an image file. You should upload an SVG image, or a JPG, PNG, or WEBP image with a width of at least 400px. The max file size is 5 MB. For best results, your image should be a horizontal rectangle:
 
-![Example Logo](../../images/web_forms/example-logo.png#margin=1rem)
+![Example Logo](./example-logo.png)
 
 Click "Save" to upload your image. When you visit a template form, you should now see your logo at the top of the page:
 
-![Form with custom logo](../../images/web_forms/form-with-custom-logo.png#margin=1rem)
+![Form with custom logo](./form-with-custom-logo.png)
 
 > Note: Logos are not shown for embedded forms on your own website. However, you have full control of the page, so you can manually add a logo or any other content.

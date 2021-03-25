@@ -1,7 +1,5 @@
 ---
 title: Getting Started
-parent: 683079
-child_order: 2
 ---
 
 # Getting Started
@@ -12,7 +10,7 @@ Add a new field by clicking and dragging on the template.
 
 You can change the type of new fields by clicking one of the options in the header:
 
-![New Field Type](../../images/template_editor/getting_started/new_field_type.png#margin=1rem)
+![New Field Type](./new_field_type.png)
 
 You can also change the type of new fields by using their [keyboard shortcuts](./keyboard-shortcuts).
 

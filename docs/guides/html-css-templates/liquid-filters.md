@@ -1,12 +1,10 @@
 ---
 title: Liquid Filters
-parent: 607583
-child_order: 2
 ---
 
 # Liquid Filters
 
-[HTML/CSS Templates](../../html-css-templates) use the [Liquid markup language](https://shopify.github.io/liquid/basics/introduction/). You can use "filters" to format and modify any values before inserting them into the page.
+[HTML/CSS Templates](./index) use the [Liquid markup language](https://shopify.github.io/liquid/basics/introduction/). You can use "filters" to format and modify any values before inserting them into the page.
 
 DocSpring supports most of the filters that you can find in [the Liquid documentation](https://shopify.github.io/liquid/).
 However, you may find some filters in [Shopify's Liquid documentation](https://shopify.dev/docs/themes/liquid/reference) that we don't support. Please [contact us](mailto:support@docspring.com) if you would like us to add a new Liquid filter.
@@ -133,7 +131,7 @@ Convert a date into a specific timezone. You can also pass `'now'` or `'today'` 
 
 **Parameters:**
 
-- `timezone` - [Here is the list of all available timezones.](./liquid_timezones.md)
+- `timezone` - [Here is the list of all available timezones.](./liquid-timezones)
 
 **Examples:**
 

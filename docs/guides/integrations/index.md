@@ -1,9 +1,5 @@
 ---
 title: Integrations
-has_children: true
-id: 714548
-order: 5
-child_order: 1
 ---
 
 # Integrations

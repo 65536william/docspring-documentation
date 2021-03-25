@@ -1,7 +1,5 @@
 ---
 title: AWS S3
-parent: 714548
-child_order: 1
 ---
 
 # AWS S3 Integration
@@ -90,7 +88,7 @@ You can also configure different path templates for live and test submissions.
     - `month` _(Not zero-padded)_ - Example: `5`
     - `day` _(Not zero-padded)_ - Example: `9`
 - Configure the "Path Template for Combined PDFs"
-  - Leave this blank if you will not be [combining any PDFs](../../../api/combine-pdfs)
+  - Leave this blank if you will not be [combining any PDFs](../../api/combine-pdfs)
   - Example: {% raw %}`merged_pdfs/{{ combined_submission_id }}.pdf`{% endraw %} will upload your PDF to: `merged_pdfs/com_Zbetd3ayK4EK3J4Hf4.pdf`
   - You can use any values from the `metadata` object.
     - Access values with {% raw %}`{{ metadata.<key> }}`{% endraw %}

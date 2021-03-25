@@ -1,12 +1,10 @@
 ---
 title: Liquid Timezones
-parent: 607583
-child_order: 3
 ---
 
 # Timezones for Liquid Templates
 
-Here is the list of timezones that you can use in the `in_time_zone` Liquid filter for [HTML/CSS templates](../../html-css-templates):
+Here is the list of timezones that you can use in the `in_time_zone` Liquid filter for [HTML/CSS templates](./index):
 
 | Timezone                       | UTC Offset |
 | ------------------------------ | ---------- |

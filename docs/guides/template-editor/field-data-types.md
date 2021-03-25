@@ -1,7 +1,5 @@
 ---
 title: Field Data Types
-parent: 683079
-child_order: 4
 ---
 
 # Field Data Types
@@ -14,21 +12,21 @@ child_order: 4
 
 If you add some Field Options, then the value must be one of those options. A select list will be displayed on online forms.
 
-![Field Options](.img/template_editor/field-options.png#margin=1rem)
+![Field Options](./field-options.png)
 
 ### Conditions
 
 When a _String_ field is displayed as a _Check_ or _Shape_, you can define a Condition. The field will only be displayed when the value matches the condition. The condition predicate can be one of: _Equals_, _Contains_, _Starts With_, _Ends With_, or _Regex_.
 
-![Conditions](.img/template_editor/conditions.png#margin=1rem)
+![Conditions](./conditions.png)
 
 ### Available Display Types
 
-- [Text](./field_display_types.md#text)
-- [Check](./field_display_types.md#check)
-- [Shape](./field_display_types.md#shape)
-- [QR Code](./field_display_types.md#qrcode)
-- [Barcode](./field_display_types.md#barcode)
+- [Text](./field-display-types.md#text)
+- [Check](./field-display-types.md#check)
+- [Shape](./field-display-types.md#shape)
+- [QR Code](./field-display-types.md#qrcode)
+- [Barcode](./field-display-types.md#barcode)
 
 ## Number
 
@@ -43,26 +41,26 @@ You can define a Minimum and Maximum value. You can check the "Exclusive" checkb
 
 In the following example, the value must be an integer. The value must be greater than `0`, and less than or equal to `1000`.
 
-![Number Options](.img/template_editor/number-options.png#margin=1rem)
+![Number Options](./number-options.png)
 
 ### Formulas
 
 A _Number_ field can be a formula that performs a calculation. Formulas can reference other _Number_ fields.
 View the [Formula documentation](./formulas) for more information about formula syntax, operators, and functions.
 
-![Formulas](.img/template_editor/formulas.png#margin=1rem)
+![Formulas](./formulas.png)
 
 ### Conditions
 
 When a _Number_ field is displayed as a _Check_ or _Shape_, you can define a Condition. The field will only be displayed when the value matches the condition. The condition predicate can be one of: _Equals_, _Greater or Equal_, _Greater_, _Less or Equal_, _Less_, or _In Range_.
 
-![Number Conditions](.img/template_editor/number-condition-range.png#margin=1rem)
+![Number Conditions](./number-condition-range.png)
 
 ### Available Display Types
 
-- [Text](./field_display_types.md#text)
-- [Check](./field_display_types.md#check)
-- [Shape](./field_display_types.md#shape)
+- [Text](./field-display-types.md#text)
+- [Check](./field-display-types.md#check)
+- [Shape](./field-display-types.md#shape)
 
 ## Boolean
 
@@ -72,7 +70,7 @@ A _Boolean_ value must be either `true` or `false`.
 
 When a _Boolean_ field is displayed as _Text_, the text will be either "Yes" or "No". These strings can be configured for each field. You can also set default values in the template settings.
 
-![Boolean Text](.img/template_editor/boolean-text.png#margin=1rem)
+![Boolean Text](./boolean-text.png)
 
 ### Check or Shape
 
@@ -80,9 +78,9 @@ When a _Boolean_ field is displayed as a _Check_ or _Shape_, the field will only
 
 ### Available Display Types
 
-- [Text](./field_display_types.md#text)
-- [Check](./field_display_types.md#check)
-- [Shape](./field_display_types.md#shape)
+- [Text](./field-display-types.md#text)
+- [Check](./field-display-types.md#check)
+- [Shape](./field-display-types.md#shape)
 
 ## Date
 
@@ -92,7 +90,7 @@ When _Include Time_ is checked, the value must be a timestamp formatted as: `YYY
 
 A _Date_ field can be formatted using a format string. DocSpring supports the [`strftime` format directives from the Ruby programming language](https://apidock.com/ruby/DateTime/strftime).
 
-![Date Options](.img/template_editor/date-options.png#margin=1rem)
+![Date Options](./date-options.png)
 
 ### Example
 
@@ -102,11 +100,11 @@ Some forms may have separate fields for month, day, and year. You could configur
 - `%-d` for day
 - `%Y` for year
 
-![Date Formats](.img/template_editor/day-month-year.png#margin=1rem)
+![Date Formats](./day-month-year.png)
 
 ### Available Display Types
 
-- [Text](./field-display-types)
+- [Text](./field-display-types.md#text)
 
 ## Address
 
@@ -122,7 +120,7 @@ part (e.g. street, city, state, zip, country.)
 
 ### Available Display Types
 
-- [Text](./field-display-types)
+- [Text](./field-display-types.md#text)
 
 ## Country
 
@@ -131,9 +129,9 @@ Otherwise, it is just a _String_ field that can accept any value.
 
 ### Available Display Types
 
-- [Text](./field-display-types)
-- [Check](./field-display-types)
-- [Shape](./field-display-types)
+- [Text](./field-display-types.md#text)
+- [Check](./field-display-types.md#check)
+- [Shape](./field-display-types.md#shape)
 
 ## Email
 
@@ -141,9 +139,9 @@ An _Email_ value must be a valid email address.
 
 ### Available Display Types
 
-- [Text](./field-display-types)
-- [QR Code](./field-display-types)
-- [Barcode](./field-display-types)
+- [Text](./field-display-types.md#text)
+- [QR Code](./field-display-types.md#qrcode)
+- [Barcode](./field-display-types.md#barcode)
 
 ## URL
 
@@ -151,9 +149,9 @@ A _URL_ value must be a valid URL.
 
 ### Available Display Types
 
-- [Text](./field_display_types.md#text)
-- [QR Code](./field_display_types.md#qrcode)
-- [Barcode](./field_display_types.md#barcode)
+- [Text](./field-display-types.md#text)
+- [QR Code](./field-display-types.md#qrcode)
+- [Barcode](./field-display-types.md#barcode)
 
 ## Image
 
@@ -181,13 +179,13 @@ See the [Image Display Type](./field-display-types) section for information abou
 
 ### Available Display Types
 
-- [Image](./field-display-types)
+- [Image](./field-display-types.md#image)
 
 ## Signature
 
 A _Signature_ field adds a signature pad to the online form:
 
-![Signature Field](.img/template_editor/signature_field.jpg#margin=1rem)
+![Signature Field](./signature-field.jpg)
 
 The online form will submit the signature as a Base64 encoded image.
 
@@ -221,7 +219,7 @@ You can also ask the user to type their full name. Then submit a `text` object w
 
 ### Available Display Types
 
-- [Image](./field-display-types) _(used internally)_
+- [Image](./field-display-types.md#image) _(used internally)_
 
 ## Barcode
 
@@ -260,8 +258,8 @@ DocSpring supports the following symbologies:
 
 ### Available Display Types
 
-- [Text](./field-display-types)
-- [Barcode](./field-display-types)
+- [Text](./field-display-types.md#text)
+- [Barcode](./field-display-types.md#barcode)
 
 ## Combined
 
@@ -269,10 +267,10 @@ _Combined_ fields allow you to combine multiple field values into a single strin
 
 For example, you could combine `first_name` and `last_name` fields into a single `full_name` field:
 
-![Combined Field Names](.img/template_editor/combined-fields.png#margin=1rem)
+![Combined Field Names](./combined-fields.png)
 
 The _Separator_ value can be any string (including an empty string.)
 
 ### Available Display Types
 
-- [Text](./field-display-types)
+- [Text](./field-display-types.md#text)

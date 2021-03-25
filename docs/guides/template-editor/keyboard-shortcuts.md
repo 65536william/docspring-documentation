@@ -1,7 +1,5 @@
 ---
 title: Keyboard Shortcuts
-parent: 683079
-child_order: 9
 ---
 
 # Keyboard Shortcuts

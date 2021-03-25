@@ -1,16 +1,12 @@
 ---
 title: Data Requests JS Library
-has_children: true
-id: 355298
-order: 6
-child_order: 1
 ---
 
 # Data Requests JS Library
 
 This JS library allows you to embed a signing form on your own website.
 
-See: [Data Requests (Electronic Signatures)](../../../api/create-data-request)
+See: [Data Requests (Electronic Signatures)](../../api/create-data-request)
 
 ## Latest Version:
 

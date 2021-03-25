@@ -4,11 +4,12 @@ module.exports = {
     ],
     themeConfig: {
         displayAllHeaders: true,
-        sidebarDepth: 2,
+        sidebarDepth: 0,
+        sidebar: 'auto',
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'Guides', link: '/guides' },
-            { text: 'API', link: '/api' }
+            { text: 'Guides', link: '/guides/' },
+            { text: 'API', link: '/api/' }
         ],
         sidebar: {
             '/api/': [

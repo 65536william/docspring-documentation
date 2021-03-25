@@ -1,9 +1,5 @@
 ---
 title: Template Editor
-has_children: true
-id: 683079
-order: 1
-child_order: 1
 ---
 
 # Template Editor
@@ -14,4 +10,4 @@ If you need any help getting started, please [contact us](https://docspring.com/
 
 ## Screenshot
 
-![Template Editor](../../images/template_editor.jpg#margin=1rem)
+![Template Editor](./template-editor.jpg)

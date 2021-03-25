@@ -1,7 +1,5 @@
 ---
 title: Locked Templates
-parent: 683079
-child_order: 11
 ---
 
 # Locked Templates
@@ -25,14 +23,14 @@ The "Lock" and "Unlock" options can be found [in the "..." menu on the Templates
 
 ## Lock Template Option
 
-![Lock template option](../../images/template_editor/lock_template_option.png#margin=1rem)
+![Lock template option](./lock-template-option.png)
 
 ## Unlock Template Option
 
-![Unlock template option](../../images/template_editor/unlock_template_option.png#margin=1rem)
+![Unlock template option](./unlock-template-option.png)
 
 ## Locked Template Error
 
 If you try to open the template editor for a locked template, you will see this error message:
 
-![Locked template error](../../images/template_editor/locked_template.png#margin=1rem)
+![Locked template error](./locked-template.png)

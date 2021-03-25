@@ -1,9 +1,5 @@
 ---
 title: HTML/CSS Templates
-has_children: true
-id: 607583
-order: 2
-child_order: 1
 ---
 
 # HTML/CSS Templates
@@ -207,8 +203,8 @@ You can use the `pageNumber` and `totalPages` classes to show the current page n
 Here's how the footer will look at the bottom of the PDF:
 
 
-![Footer Example](../../images/html_templates/footer-example.png#margin=1rem)
+![Footer Example](./footer-example.png)
 
 ## Generating PDFs
 
-Once you've set up your template and added your fields, you can generate a PDF by either filling out the [web form](../../web-forms/), or [making an API request](../../../api/generate-a-pdf).
+Once you've set up your template and added your fields, you can generate a PDF by either filling out the [web form](../web-forms/), or [making an API request](../../api/generate-a-pdf).
