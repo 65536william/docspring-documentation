@@ -1,7 +1,5 @@
 ---
 title: Field Defaults
-parent: 522775
-child_order: 7
 ---
 
 # Field Defaults

@@ -1,8 +1,5 @@
 ---
 title: API Authentication
-order: 3
-parent: 121026
-child_order: 3
 ---
 
 # API Authentication

@@ -1,12 +1,10 @@
 ---
 title: Generate a PDF Special Newline Characters
-parent: 863724
-child_order: 4
 ---
 
 # Generate a PDF
 
-- [Return to "Generate PDF" API docs](../../generate-a-pdf)
+- [Return to "Generate PDF" API docs](./index)
 
 ## Special Newline Characters (`%%LF%%`)
 

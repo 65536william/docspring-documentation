@@ -1,7 +1,5 @@
 ---
 title: Rename Folder
-parent: 271611
-child_order: 3
 ---
 
 # Rename Folder
@@ -18,7 +16,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Parameters
 

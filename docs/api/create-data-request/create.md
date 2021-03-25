@@ -12,9 +12,9 @@ you can then redirect your user to a form hosted on docspring.com, embed this fo
 
 Once all of the data requests have been completed, we will generate the final PDF, and DocSpring can send a webhook notification to your server.
 
-> See the [Data Requests](../../create-data-request) documentation for more information.
+> See the [Data Requests](./index) documentation for more information.
 
-> Note: This uses the same API endpoint as a regular ["Generate PDF"](../../generate-a-pdf) request, with an additional `data_requests` array.
+> Note: This uses the same API endpoint as a regular ["Generate PDF"](../generate-a-pdf) request, with an additional `data_requests` array.
 
 ## HTTP Request
 
@@ -26,7 +26,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Parameters
 

@@ -1,8 +1,5 @@
 ---
 title: OpenAPI Specification (Swagger)
-order: 2
-parent: 121026
-child_order: 1
 ---
 
 # OpenAPI Specification (Swagger)

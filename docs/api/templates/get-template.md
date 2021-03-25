@@ -1,7 +1,5 @@
 ---
 title: Get Template
-parent: 522775
-child_order: 9
 ---
 
 # Get Template
@@ -24,7 +22,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Example Code
 

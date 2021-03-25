@@ -1,9 +1,5 @@
 ---
 title: Create Folder
-has_children: true
-id: 271611
-order: 6
-child_order: 1
 ---
 
 # Create Folder
@@ -20,7 +16,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Parameters
 

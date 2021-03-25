@@ -1,12 +1,10 @@
 ---
 title: Field Schema
-parent: 522775
-child_order: 6
 ---
 
 # Field Schema
 
-When overriding a field property in a [Generate PDF](../../generate-a-pdf) request (with `field_overrides`), or sending an [Add Field](./add-fields) request, the `field` objects must match the following JSON schema.
+When overriding a field property in a [Generate PDF](../generate-a-pdf) request (with `field_overrides`), or sending an [Add Field](./add-fields) request, the `field` objects must match the following JSON schema.
 
 For the "Add Field" API endpoint, the only required properties are `name`, and `page` for PDF templates.
 

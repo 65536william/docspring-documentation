@@ -1,9 +1,5 @@
 ---
 title: Data Requests
-has_children: true
-id: 001372
-order: 5
-child_order: 1
 ---
 
 # Data Requests
@@ -40,7 +36,7 @@ includes user authentication. This means that you need to send us some details a
 
 You can find the latest version and release notes here:
 
-- [Release Notes for Data Requests JS Library](../../../guides/embedded-library-releases/data-requests)
+- [Release Notes for Data Requests JS Library](../../guides/embedded-library-releases/index)
 
 ## Steps
 
@@ -122,7 +118,7 @@ The following example shows how you could use a simple form to gather informatio
 - [View HTML source](https://docspring.com/embed_simple_plus_data_request_example?view_source=true)
 - [See the form](https://docspring.com/embed_simple_plus_data_request_example)
 
-In this example, we use the simple [embedded forms](./embedded_forms.md) to show a form, but we hide the signature field in the `processTemplateSchema` callback by removing it from the template schema. We also cancel the PDF submission by returning `false` in the `onSubmit` callback. When the simple form is submitted, we send the data to our server, which makes an API call to create a prefilled data request. (You must also create the data request in your backend code, because you must never include your DocSpring API token in your front-end code.)
+In this example, we use the simple [embedded forms](./embedded_forms) to show a form, but we hide the signature field in the `processTemplateSchema` callback by removing it from the template schema. We also cancel the PDF submission by returning `false` in the `onSubmit` callback. When the simple form is submitted, we send the data to our server, which makes an API call to create a prefilled data request. (You must also create the data request in your backend code, because you must never include your DocSpring API token in your front-end code.)
 
 For the initial data collection step, you could use any form library that supports JSON schemas, such as [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form).
 
@@ -141,7 +137,7 @@ Do not use `maximum-scale=1` or `user-scalable=no` in this `viewport` meta tag, 
 ## Redirect to a URL
 
 After the user submits the form, you can redirect them to a different URL.
-The redirect URL can be configured [in the template settings](../../../guides/template-editor/settings), or it can be passed as an option to `DocSpring.createVisualForm()` (The `createVisualForm` option will override the template's redirect URL.)
+The redirect URL can be configured [in the template settings](../../guides/template-editor/settings), or it can be passed as an option to `DocSpring.createVisualForm()` (The `createVisualForm` option will override the template's redirect URL.)
 
 The submission ID, template ID, and template name will be appended to this URL as query params:<br/>
 `https://example.com/?submission_id=sub_123&template_id=tpl_123&template_name=My%20Template`

@@ -1,12 +1,10 @@
 ---
 title: Create Custom File From Upload
-parent: 974397
-child_order: 2
 ---
 
 # Create Custom File From Upload
 
-Upload a new custom file. You can use custom files when [merging multiple PDFs together](../../combine-pdfs ).
+Upload a new custom file. You can use custom files when [merging multiple PDFs together](./index).
 
 Before calling this API endpoint, you must first request a presigned upload URL, and upload a file to our S3 bucket. (The example code includes this step.) You then pass the file key to this API endpoint to create a custom file record.
 
@@ -20,7 +18,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Parameters
 

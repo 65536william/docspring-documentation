@@ -1,12 +1,10 @@
 ---
 title: Generate a PDF Customize the PDF Filename
-parent: 863724
-child_order: 2
 ---
 
 # Generate a PDF
 
-- [Return to "Generate PDF" API docs](../../generate-a-pdf)
+- [Return to "Generate PDF" API docs](./index)
 
 ## Customize the PDF Filename in the Download URL
 

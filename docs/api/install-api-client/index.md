@@ -1,9 +1,5 @@
 ---
 title: Install an API Client
-id: 121026
-has_children: true
-order: 1
-child_order: 2
 ---
 
 # Install an API Client

@@ -1,7 +1,5 @@
 ---
 title: Update Data Request
-parent: 001372
-child_order: 3
 ---
 
 # Update Data Request
@@ -10,7 +8,7 @@ Update the metadata or authentication details of a pending Data Request.
 
 (Please note that you cannot update a Data Request that has already been viewed or completed.)
 
-> See the [Data Requests](../../create-data-request) documentation for more information.
+> See the [Data Requests](./index) documentation for more information.
 
 ## HTTP Request
 
@@ -22,7 +20,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Example Response
 

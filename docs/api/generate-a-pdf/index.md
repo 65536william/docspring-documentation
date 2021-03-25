@@ -1,9 +1,5 @@
 ---
 title: Generate a PDF
-has_children: true
-id: 863724
-order: 2
-child_order: 1
 ---
 
 # Generate a PDF
@@ -20,7 +16,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Parameters
 
@@ -37,9 +33,9 @@ The request body must be a JSON object with the following keys:
 
 ## Further Reading
 
-- [Customize the PDF filename using Submission metadata](./generate_pdf__customize_pdf_filename.md)
-- [Monitor the `truncated_text` property for any text that couldn't fit](./generate_pdf__truncated_text.md)
-- [Use `%%LF%%` for newline characters when you are unable to send `\n`](./generate_pdf__special_newline_characters.md)
+- [Customize the PDF filename using Submission metadata](./customize-filename)
+- [Monitor the `truncated_text` property for any text that couldn't fit](./truncated-text)
+- [Use `%%LF%%` for newline characters when you are unable to send `\n`](./special-newline-characters)
 
 ## Example Response
 

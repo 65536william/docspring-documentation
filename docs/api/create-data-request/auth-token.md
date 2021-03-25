@@ -1,14 +1,12 @@
 ---
 title: Create Data Request Authentication Token
-parent: 001372
-child_order: 4
 ---
 
 # Create Data Request Authentication Token
 
 Generate an authentication token for a data request. This authentication token will expire in one hour, so you should wait until your user is ready to sign the form.
 
-> See the [Data Requests](../../create-data-request) documentation for more information.
+> See the [Data Requests](./index) documentation for more information.
 
 ## HTTP Request
 
@@ -20,7 +18,7 @@ You must send an `Authorization` header with the value `Basic` followed by base 
 
 For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
-> See the [Authentication](../../install-api-client/authentication) documentation for more information.
+> See the [Authentication](../install-api-client/authentication) documentation for more information.
 
 ## Example Response
 

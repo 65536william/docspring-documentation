@@ -1,12 +1,10 @@
 ---
 title: Generate a PDF Truncated Text
-parent: 863724
-child_order: 3
 ---
 
 # Generate a PDF
 
-- [Return to "Generate PDF" API docs](../../generate-a-pdf)
+- [Return to "Generate PDF" API docs](./index)
 
 ## `truncated_text`
 
@@ -28,4 +26,4 @@ Every key in the `truncated_text` object is a field name, and each value is an a
 
 > If you will be relying on the returned `truncated_text`, then it would be a good idea to give all of your fields a unique name and send duplicate data for each field.
 
-**Use-case:** Some government and immigration forms have an optional addendum page that can be attached if any text is too long to fit in one of the fields. You could check the `truncated_text` for each submission, and set up another template to generate any addendum pages when necessary. You can then use the [Combine PDFs](../../combine-pdfs) API endpoint to merge the main PDF form and any addendum pages.
+**Use-case:** Some government and immigration forms have an optional addendum page that can be attached if any text is too long to fit in one of the fields. You could check the `truncated_text` for each submission, and set up another template to generate any addendum pages when necessary. You can then use the [Combine PDFs](../combine-pdfs) API endpoint to merge the main PDF form and any addendum pages.
