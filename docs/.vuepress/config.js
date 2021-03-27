@@ -9,7 +9,8 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Guides', link: '/guides/' },
-            { text: 'API', link: '/api/' }
+            { text: 'API', link: '/api/' },
+            { text: 'DocSpring', link: 'https://docspring.com' }
         ],
         sidebar: {
             '/api/': [
