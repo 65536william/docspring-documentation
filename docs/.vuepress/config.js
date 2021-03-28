@@ -3,6 +3,10 @@ module.exports = {
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap' }],
     ],
     themeConfig: {
+        repo: 'wjeliot/docspring-documentation',
+        editLinks: true,
+        docsBranch: 'main',
+        docsDir: 'docs',
         displayAllHeaders: true,
         sidebarDepth: 0,
         sidebar: 'auto',
