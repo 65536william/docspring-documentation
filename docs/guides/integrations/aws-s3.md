@@ -59,7 +59,7 @@ You can also configure different path templates for live and test submissions.
 - Click "Show" under the "Secret access key".
 - Copy the Access key ID and Secret access key, and save these for later.
 
-<!-- ### Create the AWS S3 Integration in DocSpring
+### Create the AWS S3 Integration in DocSpring
 
 - Visit the [Account Integrations page](https://app.docspring.com/account_integrations)
 - Click the "Create Integration" button at the top right
@@ -86,7 +86,7 @@ You can also configure different path templates for live and test submissions.
     - `date` - Example: `20180509`
     - `year` - Example: `2018`
     - `month` _(Not zero-padded)_ - Example: `5`
-    - `day` _(Not zero-padded)_ - Example: `9`
+    - `day` _(Not zero-padded)_ - Example: `9` -->
 - Configure the "Path Template for Combined PDFs"
   - Leave this blank if you will not be [combining any PDFs](../../api/combine-pdfs)
   - Example: `merged_pdfs/{{ combined_submission_id }}.pdf` will upload your PDF to: `merged_pdfs/com_Zbetd3ayK4EK3J4Hf4.pdf`
@@ -107,7 +107,7 @@ You can also configure different path templates for live and test submissions.
 
 Now that you've created an AWS S3 integration, we will upload any generated PDFs to your S3 bucket. You can test the integration by generating a new live PDF. (Test PDFs are skipped.)
 
-When you view a submission or combined submission in the web UI, you will see the S3 upload status in the Actions section at the bottom of the page. -->
+When you view a submission or combined submission in the web UI, you will see the S3 upload status in the Actions section at the bottom of the page.
 
 ## FAQ
 
