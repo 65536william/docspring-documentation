@@ -1,15 +1,21 @@
-# Welcome to Docspring Documentation
+# What is DocSpring?
 
-DocSpring makes it easy to fill out and generate PDFs. Automagically.
+DocSpring is a speedy cloud API which enables you to generate PDFs dynamically.
 
-1. Create a template.
-Upload existing PDFs in the editor. Or design a new HTML page with dynamic fields directly in the code.
+First you create an empty PDF template in the editor. You can import existing documents, or design a new dynamic page using HTML.
 
-2. Build a form.
-Design a form to match your UI, or create an easy web form. You can embed our web forms too.
+Then connect our API and the template ID to your form – websites, apps, and CRMs all integrate well. Alternatively, you can use our free form builder, and we'll host.
 
-3. Submit the data.
-Your user fills in the form, and then you send the data as a JSON object to our API. Web forms do this by default.
+Now your user simply fills in the form and clicks 'submit'. Your form should send the data to our API as a JSON object.
 
-4. Your PDF is generated.
-Our API returns a download link to the filled-in PDF, almost immediately. Welcome to a speedy workflow.
+Boom! Our servers automatically fill out your template with the data, and then our API returns a link to download the PDF. DocSpring is very fast.
+
+## Who uses DocSpring?
+
+Most of our users take advantage of the API to automate their workflows and to make filling out documents less dull for their customers.
+
+Imagine trying to get car insurance fifty years ago. An agent would need to handwrite your details onto a piece of paper, slowly going through each line. It's a waste of time all round, it's prone to errors, and the document only lives in some remote filing cabinet.
+
+DocSpring revolutionises this bureaucratic process. Our users build elegant, easy forms for their customers. The PDFs are generated within seconds and are available worldwide in the cloud. Everything is automatic: no need for an agent any more.
+
+## How does DocSpring work?
