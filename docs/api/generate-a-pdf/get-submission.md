@@ -79,7 +79,8 @@ The following example API response includes details about an AWS S3 integration 
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 // This is a live example that you can run with Node
@@ -101,7 +102,8 @@ client.getSubmission(
 )
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 # This is a live example that you can run in IRB.
@@ -123,7 +125,8 @@ submission = docspring.get_submission(submission_id, include_data: false)
 puts submission
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 # This is a live example that you can run in the Python interpreter
@@ -137,7 +140,8 @@ submission = client.get_submission("PLh644LApyMAD3p9", include_data=False)
 print(submission)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -152,7 +156,8 @@ $submission = $docspring->getSubmission($submission_id, false);
 echo $submission;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -180,7 +185,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 # This is a live example that you can run in your console.
@@ -192,3 +198,6 @@ export SUBMISSION_ID="PLh644LApyMAD3p9"
 curl -s "https://api.docspring.com/api/v1/submissions/$SUBMISSION_ID?include_data=false" \
   -u "$API_TOKEN_ID:$API_TOKEN_SECRET"
 ```
+
+</template>
+</CodeSwitcher>

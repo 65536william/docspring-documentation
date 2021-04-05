@@ -100,7 +100,8 @@ prove that the SHA256 hashes match the records in your database.
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 import DocSpring from 'docspring'
@@ -133,7 +134,8 @@ client.generatePDF(templateId, submissionData, function (error, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -170,7 +172,8 @@ response = docspring.generate_pdf(
 )
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -204,7 +207,8 @@ response = client.generate_pdf(
 puts response.submission.data_requests.first
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -236,7 +240,8 @@ $submission->setDataRequests(array(
 $response = $docspring->generatePDF($template_id, $data);
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -280,7 +285,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the PDF to be processed, then prints the download URL.
 
@@ -321,3 +327,6 @@ done
 echo "Download your PDF at:"
 get_json_value "$RESPONSE" download_url
 ```
+
+</template>
+</CodeSwitcher>

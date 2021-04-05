@@ -38,7 +38,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -51,7 +52,8 @@ client.getDataRequest('drq_000000000000000001', function (error, dataRequest) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -62,7 +64,8 @@ data_request = docspring.get_data_request('drq_000000000000000001')
 puts data_request
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -72,7 +75,8 @@ data_request = client.get_data_request("drq_000000000000000001")
 print(data_request)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -82,7 +86,8 @@ $data_request = $docspring->getDataRequest($data_request_id);
 echo $data_request;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -106,7 +111,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 export DATA_REQUEST_ID="drq_000000000000000001"
@@ -114,3 +120,6 @@ export DATA_REQUEST_ID="drq_000000000000000001"
 curl -s "https://api.docspring.com/api/v1/data_requests/$DATA_REQUEST_ID" \
   -u "$API_TOKEN_ID:$API_TOKEN_SECRET"
 ```
+
+</template>
+</CodeSwitcher>

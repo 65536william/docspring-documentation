@@ -1,4 +1,5 @@
 module.exports = {
+    plugins: [ 'code-switcher' ],
     head: [
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap' }],
     ],

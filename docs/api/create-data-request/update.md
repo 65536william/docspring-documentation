@@ -45,7 +45,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -66,7 +67,8 @@ client.updateDataRequest(
 )
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -82,7 +84,8 @@ response = docspring.update_data_request(
 puts response
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -99,7 +102,8 @@ response = client.update_data_request(
 print(response)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -113,7 +117,8 @@ $response = $docspring->updateDataRequest($data_request_id, $data);
 echo $response;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -142,7 +147,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 export DATA_REQUEST_ID="drq_000000000000000001"
@@ -151,3 +157,6 @@ curl -s -X PUT "https://api.docspring.com/api/v1/data_requests/$DATA_REQUEST_ID"
   -u "$API_TOKEN_ID:$API_TOKEN_SECRET" -d \
     '{ "auth_type": "oauth", "auth_provider": "google", "auth_session_started_at": "2018-10-23T13:00:00Z" }'
 ```
+
+</template>
+</CodeSwitcher>

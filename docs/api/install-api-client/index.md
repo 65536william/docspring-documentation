@@ -137,7 +137,6 @@ dotnet add package DocSpring.Client
 paket add DocSpring.Client
 ```
 
-{% sample lang="other" -%}
 **If you would like DocSpring to support a new language, please send us an email at: support@docspring.com**
 
 We define our API endpoints and request/response schemas with an OpenAPI Specification (formerly known as [Swagger](https://swagger.io/).) We use [openapi-generator](https://github.com/OpenAPITools/openapi-generator) to automatically generate our API clients.

@@ -28,7 +28,8 @@ The request body must be a JSON object with the following properties:
 
 ## Example Code
 
-### C#
+<CodeSwitcher :languages="{csharp:'C#'}">
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -99,3 +100,6 @@ namespace Example
     }
 }
 ```
+
+</template>
+</CodeSwitcher>

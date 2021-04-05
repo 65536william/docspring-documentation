@@ -50,9 +50,8 @@ For example, if you set `pdf_filename` to `custom_pdf_file123`, the PDF URL will
 > Custom PDF filenames have a maximum length of 128 characters, and can include the following characters:
 > `0-9 A-Z a-z - _ .`. Any other characters will be replaced with an underscore.
 
-## Example Code
-
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
@@ -82,7 +81,8 @@ docspring.combinePdfs(options, function (error, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -110,7 +110,8 @@ response = docspring.combine_pdfs(
 puts "Download your combined PDF at: #{response.combined_submission.download_url}"
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 # This is a live example that you can run in the Python interpreter
@@ -133,7 +134,8 @@ combined_submission = client.combine_pdfs({
 print("Download your combined PDF at: %s" % combined_submission.download_url)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -157,7 +159,8 @@ echo $response;
 echo "Download your combined PDF at: " . $response->getCombinedSubmission()->getDownloadUrl();
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -202,7 +205,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the merged PDF to be processed, then prints the download URL.
 
@@ -244,3 +248,6 @@ done
 echo "Download your combined PDF at:"
 get_json_value "$RESPONSE" download_url
 ```
+
+</template>
+</CodeSwitcher>

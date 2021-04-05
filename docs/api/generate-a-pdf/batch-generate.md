@@ -37,7 +37,8 @@ Each object in the array must have the following keys:
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 // This is a live example that you can run with Node
@@ -80,7 +81,8 @@ client.batchGeneratePDFs(templateId, submissionData, function (
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 # This is a live example that you can run in IRB.
@@ -125,7 +127,8 @@ responses = docspring.batch_generate_pdf(TEMPLATE_ID,
 
 <!-- 23a664f3b2721d119d85e3351324a26be965202db0af1d113a7f3 -->
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 # This is a live example that you can run in the Python interpreter
@@ -172,7 +175,8 @@ You can also pass `wait=False` to return immediately, and you will receive a pen
 
 If you want to batch generate multiple PDFs and combine them into a single operation, you can do that with the `batch_generate_and_combine_pdfs` method. This takes the same arguments as `batch_generate_pdfs`, and returns a "combined submission" response.
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -204,7 +208,8 @@ $responses = $docspring->batchGeneratePDFs($template_id, $create_submission_batc
 print_r($responses);
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -257,7 +262,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the PDF to be processed, then prints the download URL.
 
@@ -274,3 +280,6 @@ curl -s "https://api.docspring.com/api/v1/submissions/batches" \
   -X POST \
   -d '[{"data":{"first_name": "John", "last_name": "Smith", "favorite_color": "Blue"}, "metadata": { "user_id": 123 }}]'
 ```
+
+</template>
+</CodeSwitcher>

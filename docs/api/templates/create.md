@@ -59,7 +59,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', php:'PHP', java: 'Java', csharp:'C#'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -84,7 +85,8 @@ instance.createPDFTemplate(
 )
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 // You can run this example in the PHP interactive shell (php -a)
@@ -109,7 +111,8 @@ $response = $this->docspring->createHTMLTemplate($create_template_data);
 echo "Created new template with ID: " . $response->getId();
 ```
 
-### Java
+</template>
+<template v-slot:java>
 
 ```java
 // Find your API tokens here: https://app.docspring.com/api_tokens
@@ -149,7 +152,8 @@ PendingTemplate template = retrofitResponse.body();
   System.out.printf("Uploaded template! ID: %s", template.getId());
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -178,3 +182,6 @@ namespace Example
     }
 }
 ```
+
+</template>
+</CodeSwitcher>

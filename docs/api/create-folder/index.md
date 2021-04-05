@@ -39,7 +39,8 @@ The request body must be a JSON object with the following properties:
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 import DocSpring from 'docspring'
@@ -65,7 +66,8 @@ client.createFolder(data, function (error, folder, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -88,7 +90,8 @@ response = docspring.create_folder(
 puts response
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -108,7 +111,8 @@ response = client.create_folder(
 print(response)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -126,7 +130,8 @@ $folder = $docspring->createFolder($params);
 echo $folder;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -159,7 +164,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the PDF to be processed, then prints the download URL.
 
@@ -179,4 +185,5 @@ RESPONSE=$(create_folder)
 echo $RESPONSE
 ```
 
-{% endmethod %}
+</template>
+</CodeSwitcher>

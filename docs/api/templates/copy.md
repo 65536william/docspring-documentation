@@ -55,7 +55,8 @@ We will return data for the copied template:
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 import DocSpring from 'docspring'
@@ -81,7 +82,8 @@ client.copyTemplate(templateId, data, function (error, template, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -104,7 +106,8 @@ response = docspring.copy_template(template_id,
 puts response
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -123,7 +126,8 @@ response = client.copy_template(template_id,
 print(response)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -140,7 +144,8 @@ $template = $docspring->copyTemplate($template_id, $params);
 echo $template;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -172,7 +177,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 export API_TOKEN_ID="API_TOKEN_ID"
@@ -191,3 +197,6 @@ copy_template() {
 RESPONSE=$(copy_template)
 echo $RESPONSE
 ```
+
+</template>
+</CodeSwitcher>

@@ -17,7 +17,8 @@ Our API includes an `/authentication` endpoint that you can use to make sure you
 
 ## Test Authentication
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 // This is a live example that you can run with Node
@@ -35,7 +36,8 @@ client.testAuthentication(function (error, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -53,7 +55,8 @@ docspring.test_authentication
 # => #<DocSpring::InlineResponse200:0x012389abcdef @status="success">
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -66,7 +69,8 @@ client.test_authentication()
 # => {'status': 'success'}
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -79,7 +83,8 @@ echo $docspring->testAuthentication();
 # => { "status": "success" }
 ```
 
-### C\#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -106,7 +111,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 curl -u DOCSPRING_TOKEN_ID:DOCSPRING_TOKEN_SECRET -X GET https://api.docspring.com/api/v1/authentication
@@ -114,3 +120,6 @@ curl -u DOCSPRING_TOKEN_ID:DOCSPRING_TOKEN_SECRET -X GET https://api.docspring.c
 # Live example:
 curl -u yRaaR9JmTPtGX7EN:IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec -X GET https://api.docspring.com/api/v1/authentication
 ```
+
+</template>
+</CodeSwitcher>

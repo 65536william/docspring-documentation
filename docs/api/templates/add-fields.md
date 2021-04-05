@@ -41,7 +41,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby'}">
+<template v-slot:javascript>
 
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
@@ -81,7 +82,8 @@ docspring.addFieldsToTemplate(template_id, newFieldData, function (
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 # Find your API tokens here: https://app.docspring.com/api_tokens
@@ -125,3 +127,6 @@ response = client.add_fields_to_template(
 puts response
 # => {:new_field_ids=>[3, 4, 5], :status=>"success"}
 ```
+
+</template>
+</CodeSwitcher>

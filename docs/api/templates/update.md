@@ -35,7 +35,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript'}">
+<template v-slot:javascript>
 
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
@@ -62,3 +63,6 @@ docspring.updateTemplate(template_id, template_data, function (
   console.log(response)
 })
 ```
+
+</template>
+</CodeSwitcher>

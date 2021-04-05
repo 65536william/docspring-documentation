@@ -69,7 +69,8 @@ The request body must be a JSON object with the following keys:
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
@@ -111,7 +112,8 @@ docspring.generatePDF(template_id, submission_data, function (
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 # Find your API tokens here: https://app.docspring.com/api_tokens
@@ -148,7 +150,8 @@ puts "Download your PDF at: #{submission.download_url}"
 
 <!-- 23a664f3b2721d119d85e3351324a26be965202db0af1d113a7f3 -->
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 # This is a live example that you can run in the Python interpreter
@@ -181,7 +184,8 @@ submission = client.generate_pdf(
 print("Download your PDF at: %s" % submission.download_url)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 // You can run this example in the PHP interactive shell (php -a)
@@ -209,7 +213,8 @@ $submission = $docspring->generatePDF($template_id, $submission_data);
 echo "Download your PDF at: " . $submission->getDownloadUrl();
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -253,7 +258,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the PDF to be processed, then prints the download URL.
 
@@ -296,3 +302,6 @@ done
 echo "Download your PDF at:"
 get_json_value "$RESPONSE" download_url
 ```
+
+</template>
+</CodeSwitcher>

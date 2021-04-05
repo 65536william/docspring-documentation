@@ -26,7 +26,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', csharp:'C#'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -42,7 +43,8 @@ client.getTemplate('YOUR_TEMPLATE_ID', function (error, template) {
 })
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -68,3 +70,6 @@ namespace Example
     }
 }
 ```
+
+</template>
+</CodeSwitcher>

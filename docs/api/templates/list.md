@@ -20,7 +20,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -43,7 +44,8 @@ client.listTemplates(opts, function (error, templates) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -59,7 +61,8 @@ templates = docspring.list_templates(query: 'search by name', parent_folder_id: 
 puts templates
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -72,7 +75,8 @@ templates = client.list_templates(page=1, per_page=10, query="search by name")
 print(templates)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -90,7 +94,8 @@ $templates = $docspring->listTemplates($query, $parent_folder_id, $page, $per_pa
 echo $templates;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -125,3 +130,6 @@ namespace Example
     }
 }
 ```
+
+</template>
+</CodeSwitcher>

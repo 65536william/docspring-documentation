@@ -31,7 +31,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 import DocSpring from 'docspring'
@@ -52,7 +53,8 @@ client.deleteFolder(folderId, function (error, folder, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -73,7 +75,8 @@ response = docspring.delete_folder(folder_id)
 puts response
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -88,7 +91,8 @@ response = client.delete_folder(folder_id)
 print(response)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -101,7 +105,8 @@ $folder = $docspring->deleteFolder($folder_id);
 echo $folder;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -129,7 +134,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the PDF to be processed, then prints the download URL.
 
@@ -149,3 +155,6 @@ delete_folder() {
 RESPONSE=$(delete_folder)
 echo $RESPONSE
 ```
+
+</template>
+</CodeSwitcher>

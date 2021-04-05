@@ -39,7 +39,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 import DocSpring from 'docspring'
@@ -59,7 +60,8 @@ client.listFolders(opts, function (error, folders, response) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -78,7 +80,8 @@ folders = docspring.list_folders(parent_folder_id: "fld_000000000000000002")
 puts folders
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -91,7 +94,8 @@ folders = client.list_folders(parent_folder_id=1)
 print(folders)
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -104,7 +108,8 @@ $folder = $docspring->listFolders($parent_folder_id);
 echo $folder;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -132,7 +137,8 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 The following example waits for the PDF to be processed, then prints the download URL.
 
@@ -149,3 +155,6 @@ list_folders() {
 RESPONSE=$(list_folders)
 echo $RESPONSE
 ```
+
+</template>
+</CodeSwitcher>

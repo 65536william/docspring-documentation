@@ -23,7 +23,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -39,7 +40,8 @@ client.expireSubmission('YOUR_SUBMISSION_ID', function (error, submission) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -54,7 +56,8 @@ response = docspring.expire_submission('YOUR_SUBMISSION_ID')
 puts response
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -67,7 +70,8 @@ response = client.expire_submission('YOUR_SUBMISSION_ID')
 puts response
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -79,7 +83,8 @@ $response = $docspring->expireSubmission('YOUR_SUBMISSION_ID');
 echo $response;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -106,9 +111,13 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 curl -s -X DELETE "https://api.docspring.com/api/v1/submissions/YOUR_SUBMISSION_ID" \
   -u "YOUR_API_TOKEN_ID:YOUR_API_TOKEN_SECRET"
 ```
+
+</template>
+</CodeSwitcher>

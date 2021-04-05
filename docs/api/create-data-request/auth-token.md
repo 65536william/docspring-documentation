@@ -36,7 +36,8 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-### JavaScript
+<CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
+<template v-slot:javascript>
 
 ```javascript
 var DocSpring = require('docspring')
@@ -52,7 +53,8 @@ client.createDataRequestToken('DATA_REQUEST_ID', function (error, token) {
 })
 ```
 
-### Ruby
+</template>
+<template v-slot:ruby>
 
 ```ruby
 require 'docspring'
@@ -67,7 +69,8 @@ response = docspring.create_data_request_token('DATA_REQUEST_ID')
 puts response
 ```
 
-### Python
+</template>
+<template v-slot:python>
 
 ```python
 import docspring
@@ -80,7 +83,8 @@ response = client.create_data_request_token('DATA_REQUEST_ID')
 puts response
 ```
 
-### PHP
+</template>
+<template v-slot:php>
 
 ```php
 <?php
@@ -92,7 +96,8 @@ $response = $docspring->createDataRequestToken('DATA_REQUEST_ID');
 echo $response;
 ```
 
-### C#
+</template>
+<template v-slot:csharp>
 
 ```csharp
 using System;
@@ -119,9 +124,13 @@ namespace Example
 }
 ```
 
-### Bash
+</template>
+<template v-slot:bash>
 
 ```bash
 curl -s -X POST "https://api.docspring.com/api/v1/submissions/DATA_REQUEST_ID" \
   -u "YOUR_API_TOKEN_ID:YOUR_API_TOKEN_SECRET"
 ```
+
+</template>
+</CodeSwitcher>
