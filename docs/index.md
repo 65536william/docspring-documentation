@@ -1,8 +1,12 @@
 # What is DocSpring?
 
-DocSpring is a speedy cloud API which enables you to generate PDFs dynamically.
+DocSpring is a **speedy cloud service** which enables you to **generate PDFs dynamically**. Our API inserts data (usually from a form) into your template and provides the completed PDF within seconds.
 
-First you create an empty PDF template in the editor. You can import existing documents, or design a new dynamic page using HTML.
+## Get started
+
+1. In our dashboard, upload or create the document that you want to be filled out. Empty documents are called *templates*, and we support two different types:
+    - You can easily make a [PDF template](/guides/template-editor) from an existing file. Simply upload a `.pdf`, and drag and drop fields onto the page. If your file already has fillable fields, the editor will automatically import them.
+    - Alternatively, build a dynamic [HTML template](/guides/html-css-templates) and style it with CSS. Since these templates rebuild on each API request, they are very customisable and flexible.
 
 Then connect our API and the template ID to your form – websites, apps, and CRMs all integrate well. Alternatively, you can use our free form builder, and we'll host.
 
