@@ -6,7 +6,7 @@ title: Update Data Request
 
 Update the metadata or authentication details of a pending Data Request.
 
-(Please note that you cannot update a Data Request that has already been viewed or completed.)
+Please note that you cannot update a Data Request that has already been viewed or completed.
 
 > See the [Data Requests](./index) documentation for more information.
 
@@ -49,22 +49,22 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-client = new DocSpring.Client(config)
+client = new DocSpring.Client(config);
 
 client.updateDataRequest(
-  'drq_000000000000000001',
+  "drq_000000000000000001",
   {
-    auth_type: 'oauth',
-    auth_provider: 'google',
-    auth_session_started_at: '2018-10-23T13:00:00Z',
+    auth_type: "oauth",
+    auth_provider: "google",
+    auth_session_started_at: "2018-10-23T13:00:00Z",
   },
-  function (error, dataRequest) {
-    if (error) throw error
-    console.log(dataRequest)
+  function(error, dataRequest) {
+    if (error) throw error;
+    console.log(dataRequest);
   }
-)
+);
 ```
 
 </template>

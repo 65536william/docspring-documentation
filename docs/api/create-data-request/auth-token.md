@@ -4,7 +4,7 @@ title: Create Data Request Authentication Token
 
 # Create Data Request Authentication Token
 
-Generate an authentication token for a data request. This authentication token will expire in one hour, so you should wait until your user is ready to sign the form.
+Generate an authentication token for a data request. It will expire in one hour, so you should wait until your user is ready to sign the form before generating the token.
 
 > See the [Data Requests](./index) documentation for more information.
 
@@ -40,17 +40,17 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-client.createDataRequestToken('DATA_REQUEST_ID', function (error, token) {
-  if (error) throw error
-  console.log(token)
-})
+client.createDataRequestToken("DATA_REQUEST_ID", function(error, token) {
+  if (error) throw error;
+  console.log(token);
+});
 ```
 
 </template>

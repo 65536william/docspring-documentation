@@ -4,7 +4,7 @@ title: Get Data Request
 
 # Get Data Request
 
-Fetch a data request to check the status.
+Fetch a data request to check its status.
 
 ## HTTP Request
 
@@ -42,14 +42,14 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-client = new DocSpring.Client(config)
+client = new DocSpring.Client(config);
 
-client.getDataRequest('drq_000000000000000001', function (error, dataRequest) {
-  if (error) throw error
-  console.log(dataRequest)
-})
+client.getDataRequest("drq_000000000000000001", function(error, dataRequest) {
+  if (error) throw error;
+  console.log(dataRequest);
+});
 ```
 
 </template>

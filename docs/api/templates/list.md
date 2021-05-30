@@ -4,7 +4,7 @@ title: List Templates
 
 # List Templates
 
-List Templates.
+List Templates. You can use search queries, list within a particular folder, and paginate the returned results.
 
 ## HTTP Request
 
@@ -24,24 +24,24 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var opts = {
-  query: 'search by name',
-  parent_folder_id: 'fld_000000000000000002',
+  query: "search by name",
+  parent_folder_id: "fld_000000000000000002",
   page: 1,
   per_page: 10,
-}
+};
 
-client.listTemplates(opts, function (error, templates) {
-  if (error) throw error
-  console.log(templates)
-})
+client.listTemplates(opts, function(error, templates) {
+  if (error) throw error;
+  console.log(templates);
+});
 ```
 
 </template>

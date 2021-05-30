@@ -6,11 +6,9 @@ child_order: 2
 
 # Create Data Request
 
-Create a new PDF job submission with pending data requests. This feature allows you to request
-information or signatures from one or more people. When you have a pending data request,
-you can then redirect your user to a form hosted on docspring.com, embed this form on your website, or send them a link via email.
+Create a new PDF job submission with pending data requests. This feature allows you to request information or signatures from one or more people. When there is a pending data request, you can redirect your user to a form hosted on docspring.com, embed the form on your website, or send them a link via email.
 
-Once all of the data requests have been completed, we will generate the final PDF, and DocSpring can send a webhook notification to your server.
+Once all of the data requests have been completed, the final PDF will be generated, and DocSpring can send a webhook notification to your server.
 
 > See the [Data Requests](./index) documentation for more information.
 
@@ -55,17 +53,9 @@ The request body must be a JSON object with the following properties:
 
 > Please send us a message if you need a different `auth_type` or `auth_second_factor_type`.
 
-Please note that is important to provide accurate authentication details,
-in case an electronic signature is disputed.
-You can send us SHA256 hashes if you don't want to disclose too much information about
-your user accounts. (However, you must never send a plaintext session ID, because
-this is very sensitive information.)
-If your user ID column is an incrementing integer, then it
-is important to use a salt to hide this information.
-We recommend configuring a single salt that you use for all of your SHA256 hashes.
-Alternatively, you can use a different salt for each user, and store this in
-your database. But please make sure you never lose this salt, otherwise there is no way to
-prove that the SHA256 hashes match the records in your database.
+It is important to provide accurate authentication details in case an electronic signature is disputed. You can send us SHA256 hashes if you don't want to disclose too much information about your user accounts. (However, you must never send a plaintext session ID, because this is very sensitive information).
+
+If your user ID column is an incrementing integer, then it is important to use a salt to hide this information. We recommend configuring a single salt that you use for all of your SHA256 hashes. Alternatively, you can use a different salt for each user, and store this in your database. But make sure that you never lose this salt, for there is no way to prove that the SHA256 hashes match the records in your database without it.
 
 ## Example Response
 
@@ -104,14 +94,14 @@ prove that the SHA256 hashes match the records in your database.
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-const templateId = 'TEMPLATE_ID'
+const templateId = "TEMPLATE_ID";
 const submissionData = {
   test: true,
   metadata: {
@@ -119,19 +109,19 @@ const submissionData = {
   },
   data_requests: [
     {
-      name: 'John Smith',
-      email: 'jsmith@example.com',
-      fields: ['name_1', 'signature_1'],
+      name: "John Smith",
+      email: "jsmith@example.com",
+      fields: ["name_1", "signature_1"],
       metadata: {
         user_id: 123,
       },
     },
   ],
-}
-client.generatePDF(templateId, submissionData, function (error, response) {
-  if (error) throw error
-  console.log(response)
-})
+};
+client.generatePDF(templateId, submissionData, function(error, response) {
+  if (error) throw error;
+  console.log(response);
+});
 ```
 
 </template>

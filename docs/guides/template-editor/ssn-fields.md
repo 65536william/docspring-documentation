@@ -8,9 +8,9 @@ Some government forms have an SSN (social security number) "comb" field that is 
 
 ![SSN Comb Field](./ssn-comb.png)
 
-To fill out this SSN field, you can use DocSpring's "Comb" and "Comb Offset" feature.
+To fill out this SSN field, you can use our "Comb" and "Comb Offset" features.
 
-First, create a new field for each SSN section. Give all of these fields the same name (e.g. `ssn`.)
+First, create a new field for each SSN section. Give all of these fields the same name (e.g. `ssn`).
 
 ![Three SSN Fields](./three-ssn-fields.png)
 

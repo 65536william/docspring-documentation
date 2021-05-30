@@ -4,7 +4,7 @@ title: Move Folder to Folder
 
 # Move to Folder
 
-Move Folder to another Folder
+Move Folder to another Folder in your DocSpring template directory.
 
 ## HTTP Request
 
@@ -41,26 +41,26 @@ The request body must be a JSON object with the following properties:
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var data = {
-  parent_folder_id: 'fld_000000000000000002',
-}
+  parent_folder_id: "fld_000000000000000002",
+};
 
-var folderId = 'fld_000000000000000001'
-client.moveFolderToFolder(folderId, data, function (error, folder, response) {
+var folderId = "fld_000000000000000001";
+client.moveFolderToFolder(folderId, data, function(error, folder, response) {
   if (error) {
-    console.log(response.body)
-    return
+    console.log(response.body);
+    return;
   } else {
-    console.log(folder)
+    console.log(folder);
   }
-})
+});
 ```
 
 </template>
@@ -160,8 +160,6 @@ namespace Example
 
 </template>
 <template v-slot:bash>
-
-The following example waits for the PDF to be processed, then prints the download URL.
 
 ```bash
 export API_TOKEN_ID="API_TOKEN_ID"

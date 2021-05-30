@@ -4,10 +4,9 @@ title: Liquid Filters
 
 # Liquid Filters
 
-[HTML/CSS Templates](./index) use the [Liquid markup language](https://shopify.github.io/liquid/basics/introduction/). You can use "filters" to format and modify any values before inserting them into the page.
+[HTML/CSS Templates](./index) use the [Liquid markup language](https://shopify.github.io/liquid/basics/introduction/). You can use "filters" to format and modify any field values before inserting them into the page.
 
-DocSpring supports most of the filters that you can find in [the Liquid documentation](https://shopify.github.io/liquid/).
-However, you may find some filters in [Shopify's Liquid documentation](https://shopify.dev/docs/themes/liquid/reference) that we don't support. Please [contact us](mailto:support@docspring.com) if you would like us to add a new Liquid filter.
+DocSpring supports most of the filters in [the Liquid documentation](https://shopify.github.io/liquid/). However, you may find some filters in [Shopify's Liquid documentation](https://shopify.dev/docs/themes/liquid/reference) that we don't currently support. Please [contact us](mailto:support@docspring.com) if you would like us to add a new filter.
 
 ## Tips
 
@@ -15,7 +14,7 @@ However, you may find some filters in [Shopify's Liquid documentation](https://s
 
 ## DocSpring Liquid Filters
 
-Here are some Liquid filters that are unique to DocSpring:
+Listed below are some Liquid filters that are unique to DocSpring:
 
 ### `pluralize`
 

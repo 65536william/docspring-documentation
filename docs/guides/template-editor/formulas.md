@@ -12,7 +12,7 @@ A [_Number_](./field-data-types.md#number) field can be a formula that performs 
 
 - Operators: `+`, `-`, `*`, `/`, `%`, `^`, `|`, `&`
 - Functions: `MIN`, `MAX`, `SUM`, `ROUND`, `ROUNDDOWN`, `ROUNDUP`
-- All functions from [Ruby's Math module](https://ruby-doc.org/core-2.4.2/Math.html), including `SIN`, `COS`, `TAN`, etc.
+- We support all functions from [Ruby's Math module](https://ruby-doc.org/core-2.4.2/Math.html), including `SIN`, `COS`, `TAN`, etc.
 
 ## Field References
 
@@ -33,11 +33,9 @@ The following table shows how to convert between the [JSON Pointer syntax](./fie
 
 ## Intermediate Variables
 
-You may want to split up a calculation into multiple steps, or re-use the result of one calculation
-in multiple places. You can do this by creating a _Number_ field that is both _Static_ and _Hidden_.
+You may want to split up a calculation into multiple steps, or re-use the result of one calculation in multiple places. You can do this by creating a _Number_ field that is both _Static_ and _Hidden_.
 
-This field will function as an intermediate "variable" that can be referenced by other formulas, but it will
-not be part of the API schema, and it is not displayed on the PDF.
+This field will function as an intermediate "variable" that can be referenced by other formulas, but it will not be part of the API schema, nor is it displayed on the PDF.
 
 ## Example
 

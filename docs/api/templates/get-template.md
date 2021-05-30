@@ -4,7 +4,7 @@ title: Get Template
 
 # Get Template
 
-Fetch a Template.
+Fetch a Template (data about the template is returned).
 
 ## HTTP Request
 
@@ -12,7 +12,7 @@ Fetch a Template.
 
 ## Parameters
 
-The default API endpoint will only return a subset of the template data, including name, description, document data, and template settings.
+The default API endpoint will by default return a subset of the template data, including name, description, document data, and template settings.
 
 You can append `?full=true` to the URL to retrieve all of the template data (including fields, html, scss, etc.)
 
@@ -30,17 +30,17 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-client.getTemplate('YOUR_TEMPLATE_ID', function (error, template) {
-  if (error) throw error
-  console.log(template)
-})
+client.getTemplate("YOUR_TEMPLATE_ID", function(error, template) {
+  if (error) throw error;
+  console.log(template);
+});
 ```
 
 </template>

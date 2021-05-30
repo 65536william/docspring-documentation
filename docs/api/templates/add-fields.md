@@ -29,7 +29,7 @@ Here is a minimal example:
 - [See the default values for field properties.](./field-defaults) (If you do not specify a property, we will use the default value.)
 - DocSpring uses a numeric ID internally for each field. A new field ID will be assigned automatically if it is not provided.
 - The `x`, `y`, `width`, and `height` properties are optional. If coordinates are not provided, DocSpring will
-  assign some default coordinates for each field and will increment the `y` position for each field.
+  assign some default coordinates for each field and will increment the `y` position for each field. However, it is likely you will want the field to appear in a certain position on your PDF template.
 
 ## Authentication
 
@@ -47,39 +47,39 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
 
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_API_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_API_TOKEN_SECRET'
-docspring = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_API_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_API_TOKEN_SECRET";
+docspring = new DocSpring.Client(config);
 
-var template_id = 'tpl_000000000000000001'
+var template_id = "tpl_000000000000000001";
 var newFieldData = {
   fields: [
     {
-      name: 'new_field_1',
+      name: "new_field_1",
       page: 1,
-      type: 'string',
+      type: "string",
     },
     {
-      name: 'new_field_2',
+      name: "new_field_2",
       page: 1,
-      type: 'number',
+      type: "number",
       integer: true,
     },
   ],
-}
-docspring.addFieldsToTemplate(template_id, newFieldData, function (
+};
+docspring.addFieldsToTemplate(template_id, newFieldData, function(
   error,
   response
 ) {
   if (error) {
-    console.log(response, error)
-    throw error
+    console.log(response, error);
+    throw error;
   }
-  console.log(response)
-})
+  console.log(response);
+});
 ```
 
 </template>

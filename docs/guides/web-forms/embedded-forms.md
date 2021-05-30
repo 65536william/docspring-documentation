@@ -6,8 +6,7 @@ child_order: 2
 
 # Embedded Forms
 
-You can embed our web forms on your own website, and users can fill out this form to generate a PDF. You can redirect users to a different page after they have filled out the form,
-or run some code in a JavaScript callback.
+You can embed our pre-designed web forms on your own website, and users can fill out this form to generate a PDF. After your user has filled out the form, you can redirect them to a specific URL or run some code in a JavaScript callback.
 
 Please see the [Web Forms documentation](../../web-forms) for more information.
 
@@ -19,7 +18,7 @@ You can find the latest version and release notes here:
 
 ## Embed Code
 
-Copy the following code into your page, replacing `TEMPLATE_ID` with your template id:
+To embed a web form, copy the following code into your page, replacing `TEMPLATE_ID` with your template id:
 
 ```html
 <link
@@ -33,7 +32,7 @@ Copy the following code into your page, replacing `TEMPLATE_ID` with your templa
 
 <div class="dsp-form"></div>
 <script>
-  DocSpring.createSimpleForm('.dsp-form', 'TEMPLATE_ID')
+  DocSpring.createSimpleForm(".dsp-form", "TEMPLATE_ID");
 </script>
 ```
 
@@ -44,17 +43,13 @@ Here is a more complex example that uses all of the options for `DocSpring.creat
 
 ## Redirect to a URL
 
-After the user submits the form, you can redirect them to a different URL.
-The redirect URL can be configured [in the template settings](../../template-editor/settings), or can be passed as an option to `DocSpring.createSimpleForm()` (The `createSimpleForm` option will override the template's redirect URL.)
+After the user submits the form, you can redirect them to a different URL. The redirect URL can be configured in the [template settings](../../template-editor/settings), or can be passed as an option to `DocSpring.createSimpleForm()` (The `createSimpleForm` option will override the template's redirect URL).
 
-The submission ID, template ID, and template name will be appended to this URL as query params:<br/>
-`https://example.com/?submission_id=sub_123&template_id=tpl_123&template_name=My%20Template`
+The submission ID, template ID, and template name will be appended to this URL as query params: `https://example.com/?submission_id=sub_123&template_id=tpl_123&template_name=My%20Template`
 
-When "Submission Privacy" is set to "Private", the user will be redirected as soon
-as the form has been saved.
+When "Submission Privacy" is set to "Private", the user will be redirected as soon as the form has been saved (i.e. before the PDF processing has even begun).
 
-When "Submission Privacy" is set to "Public", the user will be redirected after the PDF
-has finished processing. If you don't need to wait, you can set the `waitForPDF` option to `false` when calling `DocSpring.createSimpleForm()`.
+When "Submission Privacy" is set to "Public", the user will be redirected after the PDF has finished processing. If you don't need to wait, you can set the `waitForPDF` option to `false` when calling `DocSpring.createSimpleForm()`.
 
 ## JavaScript API
 

@@ -4,8 +4,7 @@ title: Locked Templates
 
 # Locked Templates
 
-You can lock a template to prevent any updates. A locked template cannot be changed through the template editor or via any API endpoints.
-However, you can still use a locked template to generate PDFs.
+You can lock a template to prevent any updates. A locked template cannot be changed through the template editor or via any API endpoints. However, you can still use a locked template to generate PDFs.
 
 We are planning to add support for template versions in the future. In the meantime, you can use template locks and duplication to create a versioning workflow:
 

@@ -12,7 +12,7 @@ You can change the type of new fields by clicking one of the options in the head
 
 ![New Field Type](./new_field_type.png)
 
-You can also change the type of new fields by using their [keyboard shortcuts](./keyboard-shortcuts).
+You can also change the type of new fields by using a [keyboard shortcut](./keyboard-shortcuts).
 
 ## Delete a Field
 

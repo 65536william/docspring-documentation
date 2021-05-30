@@ -22,7 +22,7 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 The request body must be a JSON object with the following keys:
 
-- `data` _(object)_: Data to fill in the fields. Must match the template schema.
+- `data` _(object)_: Data to fill in the fields (the values). Must match the template schema.
 - `metadata` _(object, optional)_: Any additional data, such as a user id.
   - `metadata` will be included in webhook requests.
   - You can set `pdf_filename` in the `metadata` to customize the PDF filename in the download URL (see below.)
@@ -75,19 +75,19 @@ The request body must be a JSON object with the following keys:
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
 
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_API_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_API_TOKEN_SECRET'
-docspring = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_API_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_API_TOKEN_SECRET";
+docspring = new DocSpring.Client(config);
 
-var template_id = 'tpl_000000000000000001'
+var template_id = "tpl_000000000000000001";
 var submission_data = {
   editable: false,
   data: {
-    title: 'Test PDF',
-    description: 'This PDF is great!',
+    title: "Test PDF",
+    description: "This PDF is great!",
   },
   metadata: {
     user_id: 123,
@@ -98,18 +98,15 @@ var submission_data = {
     },
   },
   wait: true,
-}
-docspring.generatePDF(template_id, submission_data, function (
-  error,
-  response
-) {
+};
+docspring.generatePDF(template_id, submission_data, function(error, response) {
   if (error) {
-    console.log(response, error)
-    throw error
+    console.log(response, error);
+    throw error;
   }
-  var submission = response.submission
-  console.log('Download your PDF at:', submission.download_url)
-})
+  var submission = response.submission;
+  console.log("Download your PDF at:", submission.download_url);
+});
 ```
 
 </template>

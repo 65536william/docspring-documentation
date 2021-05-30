@@ -4,17 +4,17 @@ title: AWS S3
 
 # AWS S3 Integration
 
-Set up this integration to copy generated PDFs into an S3 bucket in your own AWS account.
+Follow this guide to build an integration that will copy generated PDFs into your own AWS S3 account.
 
-This integration applies to all templates, submissions, and combined submissions in your account. (In the future we will add more fine-grained rules for integrations.)
+All templates, submissions, and combined submissions in your account will be copied over. (In the future we will add more fine-grained rules.)
 
-You can configure what type of submissions will be uploaded to your S3 bucket:
+You can choose which type of submissions will be uploaded to your S3 bucket:
 
 - Only Live _(default)_
 - Only Test
 - Both Live and Test
 
-You can also configure different path templates for live and test submissions.
+You can also configure different paths for live and test submissions.
 
 ## Create an S3 Bucket
 
@@ -22,7 +22,7 @@ You can also configure different path templates for live and test submissions.
 - Visit the [S3 service](https://s3.console.aws.amazon.com/s3/home)
 - Click "Create bucket"
 - Choose a bucket name and select the correct AWS region
-- Click "Next", then configure your bucket options and permission
+- Click "Next", then configure your bucket options and permissions
 - Click "Create bucket"
 
 ## Create An IAM Policy With Limited Permissions
@@ -105,24 +105,23 @@ You can also configure different path templates for live and test submissions.
     - `day` - Example: `29`
 - Click "Create"
 
-Now that you've created an AWS S3 integration, we will upload any generated PDFs to your S3 bucket. You can test the integration by generating a new live PDF. (Test PDFs are skipped.)
+Now that you've created an AWS S3 integration, we will upload any generated PDFs to your S3 bucket. You can test the integration by generating a new live PDF. (Test PDFs are skipped by default.)
 
-When you view a submission or combined submission in the web UI, you will see the S3 upload status in the Actions section at the bottom of the page.
+When you view a submission or combined submission in the web interface, you will see the S3 upload status in the Actions section at the bottom of the page.
 
 ## FAQ
 
 ### Does DocSpring still keep a copy of the PDF?
 
-Yes. This AWS S3 integration is just a one-way file upload, but DocSpring continues to store your template PDFs and generated PDFs. We serve our own copy of the generated PDF when you request a download URL. We will also use our own copy of the PDF when merging them into a "combined submission".
+Yes. This AWS S3 integration is just a one-way file upload, but DocSpring continues to store your template PDFs and generated PDFs. When you request a download URL from DocSpring, we serve the generated PDF as hosted on our own servers. We will also use our copy of the PDF when merging them into a "combined submission".
 
 ### Does DocSpring delete the PDF from my S3 bucket when a submission expires?
 
-No. DocSpring will only delete our own copy of the PDF when a submission expires. We will
-never delete a PDF in your custom S3 bucket.
+No. DocSpring will only delete our own copy of the PDF when a submission expires. We will never (and, if you followed this tutorial, we are unable to) delete a PDF in your custom S3 bucket.
 
 ### How can I tell when the PDF has been uploaded to my custom S3 bucket?
 
-One thing to be aware of is that the submission state will change to processed as soon as our copy of the PDF is ready, but it might take a few seconds before the PDF is uploaded into your custom S3 bucket. The AWS integration upload happens after the initial processing is completed.
+The submission state will change to processed as soon as our copy of the PDF is ready, but it might take a few seconds before the PDF is uploaded into your custom S3 bucket. The AWS integration upload happens after the initial processing is completed.
 
 If you need to know when the PDF is available in your own S3 bucket, you can check the `actions` array in the API response. This array will be empty before the submission is processed. As soon as the the submission is processed, it will contain an entry for the `aws_s3_upload` action. This action's `state` will be `pending` until the file has been uploaded into your S3 bucket, and then it will change to `processed`.
 
@@ -130,20 +129,20 @@ For example, here's how you could wait for the PDF to be uploaded to your own S3
 
 ```js
 const pdfHasBeenUploadedToS3Bucket = () => {
-  if (submission['actions'].length === 0) return false
-  const action = submission['actions'].find(
-    (a) => a.action_type === 'aws_s3_upload'
-  )
-  return action && action.state === 'processed'
-}
+  if (submission["actions"].length === 0) return false;
+  const action = submission["actions"].find(
+    (a) => a.action_type === "aws_s3_upload"
+  );
+  return action && action.state === "processed";
+};
 ```
 
-> This code assumes that you only have a single `aws_s3_upload` action. Note that it is possible to configure multiple AWS integrations, so you can store the PDF in multiple buckets.
+> This code assumes that you only have a single `aws_s3_upload` action. It is possible to configure multiple AWS integrations, so you can store the PDF in multiple buckets.
 
-Another thing you could do is set up an [AWS S3 event notification](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html). You could send a webhook to your server as soon as the PDF has been uploaded to your S3 bucket. This means that you wouldn't need to do any polling.
+Alternatively, you could set up an [AWS S3 event notification](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html). You could send a webhook to your server as soon as the PDF has been uploaded to your S3 bucket. This way, you wouldn't need to do any polling.
 
 ### What if my "path template" generates a duplicate key?
 
-If a path template generates a duplicate key, any existing files will be overwritten with the new file. To protect against this case, you should [enable "Versioning" for your S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html). This means that you will always be able to restore an original file in case it is accidentally overwritten with a duplicate key. Your path template should also use at least one variable that is guaranteed to be unique, such as `submission_id`.
+If a path template generates a duplicate key, any existing files will be overwritten with the new file. To prevent this from occurring, you should [enable "Versioning" for your S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html). This means that you will always be able to restore an original file in case it is accidentally overwritten with a duplicate key. Your path template should also use at least one variable that is guaranteed to be unique, such as `submission_id`.
 
-> Note: Please don't rely on the `timestamp` variable to provide unique filenames, because multiple PDFs can be processed in the same second.
+> Note: Don't rely on the `timestamp` variable to provide unique filenames, because multiple PDFs can be processed in the same second.

@@ -4,7 +4,7 @@ title: Delete Folder
 
 # Delete Folder
 
-Delete a Folder
+Delete a Folder in your DocSpring template directory.
 
 ## HTTP Request
 
@@ -35,22 +35,22 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-var folderId = 'fld_000000000000000002'
-client.deleteFolder(folderId, function (error, folder, response) {
+var folderId = "fld_000000000000000002";
+client.deleteFolder(folderId, function(error, folder, response) {
   if (error) {
-    console.log(response.body)
-    return
+    console.log(response.body);
+    return;
   } else {
-    console.log(folder)
+    console.log(folder);
   }
-})
+});
 ```
 
 </template>
@@ -136,8 +136,6 @@ namespace Example
 
 </template>
 <template v-slot:bash>
-
-The following example waits for the PDF to be processed, then prints the download URL.
 
 ```bash
 export API_TOKEN_ID="API_TOKEN_ID"

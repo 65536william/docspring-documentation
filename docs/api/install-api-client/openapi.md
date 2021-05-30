@@ -4,7 +4,7 @@ title: OpenAPI Specification (Swagger)
 
 # OpenAPI Specification (Swagger)
 
-We define our API endpoints and request/response schemas with an [OpenAPI Specification](https://swagger.io/docs/specification/about/) (formerly known as [Swagger](https://swagger.io/).)
+We define our API endpoints and request/response schemas with an [OpenAPI Specification](https://swagger.io/docs/specification/about/) (formerly known as [Swagger](https://swagger.io/)).
 
 - Here is our OpenAPI v2 specification: https://docspring.com/api-docs/v1/swagger.json
 

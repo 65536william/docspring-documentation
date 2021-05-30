@@ -4,8 +4,7 @@ title: Expire a Submission
 
 # Expire a Submission
 
-Deletes the generated PDF, clears data that was submitted in the API request, and deletes any images.
-(Electronic signatures are retained for UETA and ESIGN compliance.)
+Deletes the generated PDF, clears data that was submitted in the API request, and deletes any images. However, electronic signatures will be retained for UETA and ESIGN compliance.
 
 > Note: This API call requires a **live** API token.
 
@@ -27,17 +26,17 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-client.expireSubmission('YOUR_SUBMISSION_ID', function (error, submission) {
-  if (error) throw error
-  console.log(submission)
-})
+client.expireSubmission("YOUR_SUBMISSION_ID", function(error, submission) {
+  if (error) throw error;
+  console.log(submission);
+});
 ```
 
 </template>

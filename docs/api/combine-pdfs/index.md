@@ -6,8 +6,7 @@ title: Combine PDFs
 
 Combine multiple PDFs into a single PDF.
 
-> This endpoint was originally called "combine submissions", but the API was extended
-> to allow many different types of source PDFs (submissions, other combined PDFs, original template PDFs, custom uploaded files, and URLs.)
+> This endpoint was originally called "combine submissions", but the API was extended to allow many different types of source PDFs (submissions, other combined PDFs, original template PDFs, custom uploaded files, and URLs).
 
 ## HTTP Request
 
@@ -35,20 +34,19 @@ The request body must be a JSON object with the following keys:
     - `{ "type": "url", "url": "http://example.com/test-pdf.pdf" }`
 - `metadata` _(object, optional)_: Any additional data, such as a user id. `metadata` will be included in webhook requests.
 
-To include a custom PDF, you can either [create a custom file](./create-custom-file) and pass the ID of this file, or pass a URL where the PDF can be downloaded.
+To include a custom PDF, you can either [create a custom file](./create-custom-file) and pass the ID of this file, or pass a URL from which the PDF can be downloaded.
 
-> Note: This feature is free to use, but any source submission PDFs will count towards your monthly usage.
+> Note: We have made this feature free to use, but any source submission PDFs will count towards your monthly usage.
 
 ## Customize the PDF Filename in the Download URL
 
-You can customize the PDF filename by setting the `pdf_filename` key in the metadata. (DocSpring will add the `.pdf` extension automatically.)
+You can customize the PDF filename by setting the `pdf_filename` key in the metadata. (The `.pdf` extension will be added automatically.)
 
 For example, if you set `pdf_filename` to `custom_pdf_file123`, the PDF URL will end with: `/combined_submissions/<combined_submission_id>/custom_pdf_file123.pdf`
 
 (By default, the PDF URL will end with `/submissions/<submission_id>.pdf`)
 
-> Custom PDF filenames have a maximum length of 128 characters, and can include the following characters:
-> `0-9 A-Z a-z - _ .`. Any other characters will be replaced with an underscore.
+> Custom PDF filenames have a maximum length of 128 characters, and can include the following characters: `0-9 A-Z a-z - _ .`. Any other characters will be replaced with an underscore.
 
 <CodeSwitcher :languages="{javascript:'JavaScript', ruby:'Ruby', python:'Python', php:'PHP', csharp:'C#', bash:'bash'}">
 <template v-slot:javascript>
@@ -56,29 +54,29 @@ For example, if you set `pdf_filename` to `custom_pdf_file123`, the PDF URL will
 ```javascript
 // Find your API tokens here: https://app.docspring.com/api_tokens
 
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_API_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_API_TOKEN_SECRET'
-docspring = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_API_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_API_TOKEN_SECRET";
+docspring = new DocSpring.Client(config);
 
 var options = {
   test: false,
   source_pdfs: [
-    { type: 'submission', id: 'sub_000000000000000001' },
-    { type: 'template', id: 'tpl_000000000000000001' },
-    { type: 'submission', id: 'sub_000000000000000002' },
+    { type: "submission", id: "sub_000000000000000001" },
+    { type: "template", id: "tpl_000000000000000001" },
+    { type: "submission", id: "sub_000000000000000002" },
   ],
   wait: true,
-}
+};
 
-docspring.combinePdfs(options, function (error, response) {
-  if (error) throw error
-  var combined_submission = response.combined_submission
+docspring.combinePdfs(options, function(error, response) {
+  if (error) throw error;
+  var combined_submission = response.combined_submission;
 
-  console.log('Download your PDF at:', combined_submission.download_url)
-})
+  console.log("Download your PDF at:", combined_submission.download_url);
+});
 ```
 
 </template>

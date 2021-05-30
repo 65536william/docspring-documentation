@@ -4,19 +4,19 @@ title: Field Data Types
 
 # Field Data Types
 
-"Data Types" are the type of data that you send in your API request.
+"Data Types" are the type of data for each field.
 
 ## String
 
 ### Field Options
 
-If you add some Field Options, then the value must be one of those options. A select list will be displayed on online forms.
+If you add Field Options, then the value of the submitted data must be one of those options. A select list will be displayed on online forms.
 
 ![Field Options](./field-options.png)
 
 ### Conditions
 
-When a _String_ field is displayed as a _Check_ or _Shape_, you can define a Condition. The field will only be displayed when the value matches the condition. The condition predicate can be one of: _Equals_, _Contains_, _Starts With_, _Ends With_, or _Regex_.
+When a _String_ field is displayed as a _Check_ or _Shape_, you can define a Condition. The field will only be inserted into the PDF when the value matches the condition. The condition predicate can be: _Equals_, _Contains_, _Starts With_, _Ends With_, or _Regex_.
 
 ![Conditions](./conditions.png)
 
@@ -30,7 +30,7 @@ When a _String_ field is displayed as a _Check_ or _Shape_, you can define a Con
 
 ## Number
 
-A _Number_ field can be an integer or a float. When _Integer_ is checked, the value must be an integer. (No decimal places.)
+A _Number_ field can be an integer or a float. When _Integer_ is checked, the value must be an integer (no decimal places).
 
 ### Validations
 
@@ -45,14 +45,14 @@ In the following example, the value must be an integer. The value must be greate
 
 ### Formulas
 
-A _Number_ field can be a formula that performs a calculation. Formulas can reference other _Number_ fields.
+A _Number_ field can be a formula which performs a calculation. Formulas can also reference other _Number_ fields.
 View the [Formula documentation](./formulas) for more information about formula syntax, operators, and functions.
 
 ![Formulas](./formulas.png)
 
 ### Conditions
 
-When a _Number_ field is displayed as a _Check_ or _Shape_, you can define a Condition. The field will only be displayed when the value matches the condition. The condition predicate can be one of: _Equals_, _Greater or Equal_, _Greater_, _Less or Equal_, _Less_, or _In Range_.
+When a _Number_ field is displayed as a _Check_ or _Shape_, you can define a Condition. The field will only be inserted into the PDF when the value matches the condition. The condition predicate can be one of: _Equals_, _Greater or Equal_, _Greater_, _Less or Equal_, _Less_, or _In Range_.
 
 ![Number Conditions](./number-condition-range.png)
 
@@ -84,7 +84,7 @@ When a _Boolean_ field is displayed as a _Check_ or _Shape_, the field will only
 
 ## Date
 
-_Date_ values must be a string formatted as: `YYYY-MM-DD`.
+_Date_ values must be a `string` formatted as: `YYYY-MM-DD`.
 
 When _Include Time_ is checked, the value must be a timestamp formatted as: `YYYY-MM-DDThh:mm:ss.fffZ`.
 
@@ -108,15 +108,9 @@ Some forms may have separate fields for month, day, and year. You could configur
 
 ## Address
 
-The _Address_ type can be used to show a text input that autocompletes an address.
-Address autocompletion is powered by Google Maps.
+The _Address_ type can be used to show a text input that autocompletes an address. Address autocompletion is powered by Google Maps.
 
-The address is currently formatted as a single string.
-We are working to improve this so that you can render the
-address parts as separate fields.
-
-If you need this ability now, you should create separate text fields for each
-part (e.g. street, city, state, zip, country.)
+The address is currently formatted as a single string. We are working to improve this so that you can render the address parts as separate fields. If you need this functionality now, you could create separate text fields for each part (e.g. street, city, state, zip, country.)
 
 ### Available Display Types
 
@@ -124,8 +118,7 @@ part (e.g. street, city, state, zip, country.)
 
 ## Country
 
-The _Country_ type can be used to show a dropdown list of countries in the online form.
-Otherwise, it is just a _String_ field that can accept any value.
+The _Country_ type can be used to show a dropdown list of countries in the online form. Otherwise, it is just a _String_ field that will accept any value.
 
 ### Available Display Types
 
@@ -155,7 +148,7 @@ A _URL_ value must be a valid URL.
 
 ## Image
 
-An _Image_ value can be a Base64 encoded image, or a URL where the image can be downloaded.
+An _Image_ value can be a Base64 encoded image, or a URL from which the image can be downloaded.
 
 _(Support for direct image uploads is coming soon.)_
 
@@ -223,11 +216,9 @@ You can also ask the user to type their full name. Then submit a `text` object w
 
 ## Barcode
 
-A _Barcode_ data type ensures that you submit a valid barcode.
-The value can be rendered as a barcode image or as a string.
+A _Barcode_ data type ensures that you submit a valid barcode. The value can be rendered as a barcode image or as a string.
 
-You must configure the correct barcode [symbology](https://en.wikipedia.org/wiki/Barcode#Symbologies) (type).
-DocSpring supports the following symbologies:
+You must configure the correct barcode [symbology](https://en.wikipedia.org/wiki/Barcode#Symbologies) (type). DocSpring supports the following symbologies:
 
 - [EAN-13](https://en.wikipedia.org/wiki/International_Article_Number)
   - 12 digits _(a checksum digit is added)_

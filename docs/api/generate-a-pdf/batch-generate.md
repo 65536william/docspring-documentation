@@ -4,7 +4,7 @@ title: Batch Generate PDFs
 
 # Batch Generate PDFs
 
-Create up to 50 PDFs with a single batch request
+Create up to a maximum of 50 PDFs in a single batch request.
 
 ## HTTP Request
 
@@ -27,8 +27,7 @@ The request body must be a JSON object with the following keys:
 - `metadata` _(object, optional)_: Any additional data, such as a user id. This will be saved on the submission batch job.
 - `submissions` _(array)_: An array of submission objects.
 
-The `submissions` property must be a JSON array of objects.
-Each object in the array must have the following keys:
+The `submissions` property must be a JSON array of objects. Each object in the array must have the following keys:
 
 - `template_id` _(string, optional)_: The template ID for this submission. If not provided, uses the `template_id` from the root object.
 - `data` _(object)_: Data to fill in the fields. Must match the template schema.
@@ -43,21 +42,21 @@ Each object in the array must have the following keys:
 ```javascript
 // This is a live example that you can run with Node
 
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'yRaaR9JmTPtGX7EN'
-config.apiTokenSecret = 'IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "yRaaR9JmTPtGX7EN";
+config.apiTokenSecret = "IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec";
+client = new DocSpring.Client(config);
 
-var templateId = '6zz3dYRYM67fxMXA'
+var templateId = "6zz3dYRYM67fxMXA";
 var submissionData = [
   {
     test: true,
     data: {
-      first_name: 'John',
-      last_name: 'Smith',
-      favorite_color: 'Blue',
+      first_name: "John",
+      last_name: "Smith",
+      favorite_color: "Blue",
     },
     metadata: {
       user_id: 123,
@@ -66,19 +65,19 @@ var submissionData = [
   {
     test: true,
     data: {
-      first_name: 'Jane',
-      last_name: 'Doe',
-      favorite_color: 'Red',
+      first_name: "Jane",
+      last_name: "Doe",
+      favorite_color: "Red",
     },
   },
-]
-client.batchGeneratePDFs(templateId, submissionData, function (
+];
+client.batchGeneratePDFs(templateId, submissionData, function(
   error,
   responses
 ) {
-  if (error) throw error
-  console.log(responses)
-})
+  if (error) throw error;
+  console.log(responses);
+});
 ```
 
 </template>
@@ -173,7 +172,7 @@ If the `wait` argument is omitted or `True`, the method will wait for the batch 
 
 You can also pass `wait=False` to return immediately, and you will receive a pending batch job. You can call `get_submission_batch(response.submission_batch.id)` to fetch the current status of the batch.
 
-If you want to batch generate multiple PDFs and combine them into a single operation, you can do that with the `batch_generate_and_combine_pdfs` method. This takes the same arguments as `batch_generate_pdfs`, and returns a "combined submission" response.
+If you want to generate multiple PDFs in a batch, and combine them into a single operation, you can do that with the `batch_generate_and_combine_pdfs` method. This takes the same arguments as `batch_generate_pdfs`, and returns a "combined submission" response.
 
 </template>
 <template v-slot:php>

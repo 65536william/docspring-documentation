@@ -6,11 +6,9 @@ title: Field Names
 
 ## JSON Pointers
 
-DocSpring uses the [JSON Pointer](https://tools.ietf.org/html/rfc6901) syntax for field names.
-This means that you can describe the shape of your API by using a forward slash (`/`)
-to define object keys and array indexes. (Object keys and array indexes use the same syntax.)
+DocSpring uses the [JSON Pointer](https://tools.ietf.org/html/rfc6901) syntax for field names, so you can describe the shape of your API by using a forward slash (`/`) to define object keys and array indexes. (Object keys and array indexes use the same syntax.)
 
-Please note that fields names are **case sensitive**. `firstName` and `firstname` will be treated as two separate fields.
+Please note that fields names are **case sensitive**. As such, `firstName` and `firstname` will be treated as two separate fields.
 
 > If you need to use `/` or `~` in your field names, then you can escape `/` as `~1`, and `~` as `~0`. (See the [JSON Pointer reference](https://tools.ietf.org/html/rfc6901#section-4).)
 
@@ -28,7 +26,7 @@ In the following example, `extension_reason` is a single field in the API reques
 
 ## Duplicate Names
 
-You can use the same field name more than once. For example, some forms have separate fields for month, day, and year. You can configure three fields that all share the name `date`, but use different format strings for each field: `%-m` for month, `%-d` for day, and `%Y` for year.
+You can use the same field name more than once to have the value inserted in multiple positions on the PDF. For example, some forms have separate fields for month, day, and year. You can configure three fields that all share the name `date`, but use different format strings for each field: `%-m` for month, `%-d` for day, and `%Y` for year.
 
 ![Day/Month/Year example](./day-month-year.png)
 
@@ -85,11 +83,11 @@ These field names would have the following values:
 
 | Field Name                      | Value                       |
 | ------------------------------- | --------------------------- |
-| parent\_object/nested\_object/foo | "bar"                       |
-| array\_of\_strings/0              | "a"                         |
-| array\_of\_strings/1              | "b"                         |
-| array\_of\_strings/2              | "c"                         |
-| array\_of\_objects/0/color        | "blue"                      |
-| array\_of\_objects/1/color        | "red"                       |
-| multiline\_field#0               | "This text is so long that" |
-| multiline\_field#1               | "we need multiple lines."   |
+| parent_object/nested_object/foo | "bar"                       |
+| array_of_strings/0              | "a"                         |
+| array_of_strings/1              | "b"                         |
+| array_of_strings/2              | "c"                         |
+| array_of_objects/0/color        | "blue"                      |
+| array_of_objects/1/color        | "red"                       |
+| multiline_field#0               | "This text is so long that" |
+| multiline_field#1               | "we need multiple lines."   |

@@ -4,8 +4,7 @@ title: Simple Forms JS Library
 
 # Simple Forms JS Library
 
-This JS library allows you to embed a simple web form on your own website. Your users
-can fill out this form to generate a PDF.
+This JS library allows you to embed a simple form on your own website. Your users can fill out and submit this form to automatically generate a PDF, so you don't need to interact directly with the API.
 
 See: [Embedded Web Forms](../web-forms/embedded-forms)
 

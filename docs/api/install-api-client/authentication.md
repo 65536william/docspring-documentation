@@ -4,8 +4,7 @@ title: API Authentication
 
 # API Authentication
 
-DocSpring uses API tokens for authentication. You must authenticate using HTTP basic authentication. Use your API token ID as the username,
-and the API token secret as the password.
+DocSpring uses API tokens for authentication. You must authenticate using HTTP basic authentication so that we can confirm you are authorised to access your template or your account. Use your API token ID as the username, and the API token secret as the password.
 
 You must send an `Authorization` header with the value `Basic` followed by base 64 encoded `token_id:token_secret`.
 
@@ -23,17 +22,17 @@ Our API includes an `/authentication` endpoint that you can use to make sure you
 ```javascript
 // This is a live example that you can run with Node
 
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'yRaaR9JmTPtGX7EN'
-config.apiTokenSecret = 'IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "yRaaR9JmTPtGX7EN";
+config.apiTokenSecret = "IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec";
+client = new DocSpring.Client(config);
 
-client.testAuthentication(function (error, response) {
-  if (error) throw error
-  console.log(response)
-})
+client.testAuthentication(function(error, response) {
+  if (error) throw error;
+  console.log(response);
+});
 ```
 
 </template>

@@ -4,7 +4,7 @@ title: List Folders
 
 # List Folders
 
-List folders
+List folders in your DocSpring template directory.
 
 ## HTTP Request
 
@@ -43,21 +43,21 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var opts = {
-  parent_folder_id: 'fld_000000000000000002',
-}
+  parent_folder_id: "fld_000000000000000002",
+};
 
-client.listFolders(opts, function (error, folders, response) {
-  if (error) throw error
-  console.log(folders)
-})
+client.listFolders(opts, function(error, folders, response) {
+  if (error) throw error;
+  console.log(folders);
+});
 ```
 
 </template>
@@ -139,8 +139,6 @@ namespace Example
 
 </template>
 <template v-slot:bash>
-
-The following example waits for the PDF to be processed, then prints the download URL.
 
 ```bash
 export API_TOKEN_ID="API_TOKEN_ID"

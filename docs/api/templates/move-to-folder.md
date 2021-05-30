@@ -4,7 +4,7 @@ title: Move Template to Folder
 
 # Move to Folder
 
-Move Template to another Folder
+Move Template to another Folder.
 
 ## HTTP Request
 
@@ -22,7 +22,7 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 The request body must be a JSON object with the following properties:
 
-- `parent_folder_id` _(string, optional)_: The folder id to move the folder into. Omit this parameter to move to root folder
+- `parent_folder_id` _(string, optional)_: The folder into which to move the template. Omit this parameter to move to root folder.
 
 ## Example Response
 
@@ -56,30 +56,30 @@ The request body must be a JSON object with the following properties:
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var data = {
-  parent_folder_id: 'fld_000000000000000002',
-}
+  parent_folder_id: "fld_000000000000000002",
+};
 
-var templateId = 'tpl_000000000000000001'
-client.moveTemplateToFolder(templateId, data, function (
+var templateId = "tpl_000000000000000001";
+client.moveTemplateToFolder(templateId, data, function(
   error,
   template,
   response
 ) {
   if (error) {
-    console.log(response.body)
-    return
+    console.log(response.body);
+    return;
   } else {
-    console.log(template)
+    console.log(template);
   }
-})
+});
 ```
 
 </template>

@@ -4,7 +4,7 @@ title: Liquid Timezones
 
 # Timezones for Liquid Templates
 
-Here is the list of timezones that you can use in the `in_time_zone` Liquid filter for [HTML/CSS templates](./index):
+Below is the list of timezones that you can use in the `in_time_zone` Liquid filter for [HTML/CSS templates](./index):
 
 | Timezone                       | UTC Offset |
 | ------------------------------ | ---------- |

@@ -4,7 +4,7 @@ title: Rename Folder
 
 # Rename Folder
 
-Rename a Folder
+Rename a Folder in your DocSpring template directory.
 
 ## HTTP Request
 
@@ -42,28 +42,28 @@ The request body must be a JSON object with the following properties:
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var data = {
   folder: {
-    name: 'Renamed Folder 2',
+    name: "Renamed Folder 2",
   },
-}
+};
 
-var folderId = 'fld_000000000000000002'
-client.renameFolder(folderId, data, function (error, data, response) {
+var folderId = "fld_000000000000000002";
+client.renameFolder(folderId, data, function(error, data, response) {
   if (error) {
-    console.log(response.body)
-    return
+    console.log(response.body);
+    return;
   } else {
-    console.log(folder)
+    console.log(folder);
   }
-})
+});
 ```
 
 </template>
@@ -171,8 +171,6 @@ namespace Example
 
 </template>
 <template v-slot:bash>
-
-The following example waits for the PDF to be processed, then prints the download URL.
 
 ```bash
 export API_TOKEN_ID="API_TOKEN_ID"

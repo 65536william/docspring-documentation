@@ -4,7 +4,7 @@ title: Copy Template
 
 # Copy Template
 
-Create a new template as a copy of an existing template.
+Create a new template from a copy of an existing template.
 
 ## HTTP Request
 
@@ -59,27 +59,27 @@ We will return data for the copied template:
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var data = {
-  parent_folder_id: 'fld_000000000000000002',
-  name: 'New Template Name',
-}
+  parent_folder_id: "fld_000000000000000002",
+  name: "New Template Name",
+};
 
-var templateId = 'tpl_000000000000000001'
-client.copyTemplate(templateId, data, function (error, template, response) {
+var templateId = "tpl_000000000000000001";
+client.copyTemplate(templateId, data, function(error, template, response) {
   if (error) {
-    console.log(response.body)
-    return
+    console.log(response.body);
+    return;
   } else {
-    console.log(template)
+    console.log(template);
   }
-})
+});
 ```
 
 </template>

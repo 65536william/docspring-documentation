@@ -4,10 +4,9 @@ title: Visual Forms JS Library
 
 # Visual Forms JS Library
 
-This JS library allows you to embed a visual form on your own website.
+This JS library allows you to embed a visual form in your own website.
 
-This is a low-level form library that renders the visual form directly on a page.
-It is used internally by the [Data Requests](../../api/create-data-request) library to show the signing form inside an iframe.
+This is a low-level form library that renders the visual form directly on a page. It is used internally by the [Data Requests](../../api/create-data-request) library to show the signing form inside an iframe.
 
 Please note: The visual forms library does not provide any security features or audit trail logging, so please use the data requests library if you need to collect legally binding signatures.
 

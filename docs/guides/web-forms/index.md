@@ -4,17 +4,15 @@ title: Web Forms
 
 # Web Forms
 
-DocSpring can automatically generate web-based forms based on your template schemas. If you send your users a link to this form, they can fill out the form to generate a PDF. You can then redirect users to a different page after they have filled out the form.
+We can automatically generate web-based forms based on your template schemas. If you send your users a link to this form, they can fill it out to generate a PDF, without you needing to design any UI wrapper. You can then redirect users to a different page after they have filled out the form.
 
-You can also [embed our web-based forms on your own website](./embedded-forms). Our embedded form library can be configured with JavaScript options and callbacks.
+You can also [embed](./embedded-forms) our web forms on your own website. Our embedded form JavaScript library can be configured with JavaScript options and callbacks.
 
 ## Configure Template Privacy Settings
 
-First, you will need to go to your template's settings and make sure that "Online Form Privacy"
-is set to "Public". This will allow unauthenticated users to fill out your embedded form.
+First, make sure that "Online Form Privacy" is set to "Public" in your template's settings. This will allow unauthenticated users to fill out the embedded form.
 
-You may also want to set "Submission Privacy" to "Public".
-When this is set to "Private", the user can save the form, but they will not be able to see when the PDF has been processed. They will also not be able to download the generated PDF.
+You may also want to set "Submission Privacy" to "Public". When this is set to "Private", the user can save the form, but will not be able to see when the PDF has been processed. Nor will they be able to download the generated PDF.
 
 When "Submission Privacy" is set to "Public", the user can wait until the PDF has been processed, and you can show them a link to download the PDF.
 
@@ -22,7 +20,7 @@ When "Submission Privacy" is set to "Public", the user can wait until the PDF ha
 
 ## Query Params
 
-You can set some query params in the URL to provide default data, set submission metadata, or hide some fields on the form.
+You can set some query params in the URL to provide default data or submission metadata, or to hide some fields on the form.
 
 ### Set Default Data
 
@@ -39,7 +37,7 @@ Use the following syntax to set default data for nested fields inside objects or
 | `person/0/name`                     | `data[person][][name]=John`                          |
 | `person/0/name` and `person/1/name` | `data[person][][name]=John&data[person][][name]=Bob` |
 
-**Example:** Set default values for the name and email fields.
+**Example:** See below foe how to set default values for the `name` and `email` fields.
 
 ```
 https://app.docspring.com/templates/tpl_123/form?data[name]=John%20Smith&data[email]=test@example.com
@@ -47,7 +45,7 @@ https://app.docspring.com/templates/tpl_123/form?data[name]=John%20Smith&data[em
 
 ### Set Submission Metadata
 
-> Submission metadata is included in API responses and webhook notifications, but is not included in the generated PDF.
+> Submission metadata is included in API responses and webhook notifications, but is not included in the generated PDF as the metadata is not inserted anywhere as a field value.
 
 `?metadata[<key>]=<value>`
 
@@ -67,7 +65,7 @@ https://app.docspring.com/templates/tpl_123/form?metadata[pdf_filename]=MyGenera
 
 ### Hidden Fields
 
-You can also hide some fields on the form by passing `hidden_fields` as a list of comma-separated field names.
+You can also hide certain fields on the form by passing `hidden_fields` as a list of comma-separated field names.
 
 `?hidden_fields=<field_1>,<field_2>,...`
 
@@ -89,20 +87,17 @@ https://app.docspring.com/templates/tpl_123/form?data[person][][name]=John%20Smi
 
 ## Redirect to a URL
 
-After the user submits the form, you can redirect them to a different URL.
-The redirect URL can be configured [in the template settings](../../template-editor/settings).
+After the user submits the form, you can redirect them to a different URL. This can be configured in the [template settings](../../template-editor/settings).
 
-The submission ID, template ID, and template name will be appended to this URL as query params:<br/>
-`https://example.com/?submission_id=sub_123&template_id=tpl_123&template_name=My%20Template`
+The submission ID, template ID, and template name will be appended to this URL as query params: `https://example.com/?submission_id=sub_123&template_id=tpl_123&template_name=My%20Template`
 
-When "Submission Privacy" is set to **"Private"**, the user will be redirected as soon
-as the form has been saved. When "Submission Privacy" is set to **"Public"**, the user will be redirected after the PDF has finished processing.
+When "Submission Privacy" is set to **"Private"**, the user will be redirected as soon as the form has been saved. When "Submission Privacy" is set to **"Public"**, the user will be redirected after the PDF has finished processing.
 
 ## Custom Logo
 
-You can display a custom logo at the top of hosted web forms.
+You can display a custom logo at the top of hosted web forms to 'whitelabel' the form.
 
-[Visit the Account page](https://app.docspring.com/account), click the "Choose File" button under "Logo for Web Forms", then select an image file. You should upload an SVG image, or a JPG, PNG, or WEBP image with a width of at least 400px. The max file size is 5 MB. For best results, your image should be a horizontal rectangle:
+Visit your [Account page](https://app.docspring.com/account), click the "Choose File" button under "Logo for Web Forms", then select an image file. You can upload an SVG, JPG, PNG, or WEBP image with a width of at least 400px. The max file size is 5 MB. For best results, your image should be a horizontal rectangle:
 
 ![Example Logo](./example-logo.png)
 
@@ -110,4 +105,4 @@ Click "Save" to upload your image. When you visit a template form, you should no
 
 ![Form with custom logo](./form-with-custom-logo.png)
 
-> Note: Logos are not shown for embedded forms on your own website. However, you have full control of the page, so you can manually add a logo or any other content.
+> Note: Logos are not shown for embedded forms on your own website. However, since you have full control of your page page, you could manually add a logo or any other content above the embedded form.

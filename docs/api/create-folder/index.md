@@ -4,7 +4,7 @@ title: Create Folder
 
 # Create Folder
 
-Create a new Folder
+Create a new Folder in your DocSpring template directory.
 
 ## HTTP Request
 
@@ -24,7 +24,7 @@ The request body must be a JSON object with the following properties:
 
 - `folder` _(object, required)_: Object can have the following properties:
   - `name` _(string, required)_: The folder name.
-  - `parent_folder_id` _(string, optional)_: The id of folder you want this folder to be created under. Omit this parameter to move to root folder
+  - `parent_folder_id` _(string, optional)_: The id of folder you want this folder to be created within. Omit this parameter to move to root folder.
 
 ## Example Response
 
@@ -43,27 +43,27 @@ The request body must be a JSON object with the following properties:
 <template v-slot:javascript>
 
 ```javascript
-import DocSpring from 'docspring'
+import DocSpring from "docspring";
 
-const config = new DocSpring.Configuration()
-config.apiTokenId = 'API_TOKEN_ID'
-config.apiTokenSecret = 'API_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+const config = new DocSpring.Configuration();
+config.apiTokenId = "API_TOKEN_ID";
+config.apiTokenSecret = "API_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
 var data = {
   folder: {
-    name: 'Folder 2',
+    name: "Folder 2",
   },
-}
+};
 
-client.createFolder(data, function (error, folder, response) {
+client.createFolder(data, function(error, folder, response) {
   if (error) {
-    console.log(response.body)
-    return
+    console.log(response.body);
+    return;
   } else {
-    console.log(folder)
+    console.log(folder);
   }
-})
+});
 ```
 
 </template>
@@ -166,8 +166,6 @@ namespace Example
 
 </template>
 <template v-slot:bash>
-
-The following example waits for the PDF to be processed, then prints the download URL.
 
 ```bash
 export API_TOKEN_ID="API_TOKEN_ID"

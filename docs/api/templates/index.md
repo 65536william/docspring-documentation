@@ -1,10 +1,10 @@
 ---
-title: Templates
+title: Create New Template
 ---
 
 # Create New Template
 
-Create a new template. You can use this API endpoint to upload a new PDF directly, create a new template from a previously uploaded PDF, or create a new HTML template.
+Create a new template. You can use this API endpoint to upload a new PDF directly, create a new template from a previously uploaded PDF, or even create a new HTML template.
 
 ## HTTP Request
 
@@ -21,7 +21,7 @@ You can create a new PDF template by making a `multipart/form-data` form post. T
 
 The following form params are optional:
 
-- `template[parent_folder_id]` - The folder id that you want PDF template to be created under
+- `template[parent_folder_id]` - The folder that you want PDF template to be created within.
 
 ### Create an HTML Template
 
@@ -59,30 +59,30 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Example Code
 
-<CodeSwitcher :languages="{javascript:'JavaScript', php:'PHP', java:'Java', csharp:'C#'}">
+<CodeSwitcher :languages="{javascript:'JavaScript', php:'PHP', java: 'Java', csharp:'C#'}">
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-var fs = require('fs')
-var templateDocument = fs.createReadStream('path/to/your/pdf_document.pdf') // File |
-var templateName = 'New Template Name' // String |
-var parentFolderId = null
+var fs = require("fs");
+var templateDocument = fs.createReadStream("path/to/your/pdf_document.pdf"); // File |
+var templateName = "New Template Name"; // String |
+var parentFolderId = null;
 instance.createPDFTemplate(
   templateDocument,
   templateName,
   parentFolderId,
-  function (error, template) {
-    if (error) throw error
-    console.log(template.id, template.name, template.document_url)
+  function(error, template) {
+    if (error) throw error;
+    console.log(template.id, template.name, template.document_url);
   }
-)
+);
 ```
 
 </template>

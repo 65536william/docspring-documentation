@@ -4,7 +4,7 @@ title: Get Template Schema
 
 # Get Template Schema
 
-Fetch a template's JSON Schema.
+Fetch the JSON schema for a PDF or HTML template.
 
 ## HTTP Request
 
@@ -24,17 +24,17 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 <template v-slot:javascript>
 
 ```javascript
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'DOCSPRING_TOKEN_ID'
-config.apiTokenSecret = 'DOCSPRING_TOKEN_SECRET'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "DOCSPRING_TOKEN_ID";
+config.apiTokenSecret = "DOCSPRING_TOKEN_SECRET";
+client = new DocSpring.Client(config);
 
-client.getTemplateSchema('YOUR_TEMPLATE_ID', function (error, schema) {
-  if (error) throw error
-  console.log(schema)
-})
+client.getTemplateSchema("YOUR_TEMPLATE_ID", function(error, schema) {
+  if (error) throw error;
+  console.log(schema);
+});
 ```
 
 </template>

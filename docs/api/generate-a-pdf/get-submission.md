@@ -20,7 +20,7 @@ For example: `Authorization: Basic dG9rZW5faWQ6dG9rZW5fc2VjcmV0Cg==`
 
 ## Include Submission Data
 
-The API response does not include any submission data by default. (This is because the data can be very large, and it can also contain sensitive information.)
+The API response does not include any submission data by default. This is because the data can be very large, and it can also contain sensitive information.
 
 If you do want to return the data that was submitted with your API request, you can use the `include_data` parameter. Either append the `?include_data=true` query parameter to the URL, or send this as an option in the JSON payload.
 
@@ -28,7 +28,7 @@ If you do want to return the data that was submitted with your API request, you 
 
 ## Example Response
 
-The following example API response includes details about an AWS S3 integration (under `actions`.)
+The following example API response includes details about an AWS S3 integration (under `actions`).
 
 ```json
 {
@@ -85,21 +85,20 @@ The following example API response includes details about an AWS S3 integration 
 ```javascript
 // This is a live example that you can run with Node
 
-var DocSpring = require('docspring')
+var DocSpring = require("docspring");
 
-var config = new DocSpring.Configuration()
-config.apiTokenId = 'yRaaR9JmTPtGX7EN'
-config.apiTokenSecret = 'IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec'
-client = new DocSpring.Client(config)
+var config = new DocSpring.Configuration();
+config.apiTokenId = "yRaaR9JmTPtGX7EN";
+config.apiTokenSecret = "IB3TRkSdm4f2BdtU_D3YgxjdMB7l-r2fOgvxD1Yzwec";
+client = new DocSpring.Client(config);
 
-client.getSubmission(
-  'sub_ADPq6GNqNqpAZG9Yzb',
-  { includeData: false },
-  function (error, submission) {
-    if (error) throw error
-    console.log(submission)
-  }
-)
+client.getSubmission("sub_ADPq6GNqNqpAZG9Yzb", { includeData: false }, function(
+  error,
+  submission
+) {
+  if (error) throw error;
+  console.log(submission);
+});
 ```
 
 </template>
