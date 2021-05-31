@@ -24,6 +24,8 @@ In the following example, `extension_reason` is a single field in the API reques
 
 ![Multiline Checkbox](./multiline-checkbox.png)
 
+There is no fixed limit to the number of lines.
+
 ## Duplicate Names
 
 You can use the same field name more than once to have the value inserted in multiple positions on the PDF. For example, some forms have separate fields for month, day, and year. You can configure three fields that all share the name `date`, but use different format strings for each field: `%-m` for month, `%-d` for day, and `%Y` for year.

@@ -189,6 +189,10 @@ Here's how the footer will display at the bottom of the PDF:
 
 ![Footer Example](./footer-example.png)
 
+Our HTML engine automatically adds a 1 inch margin to the entire page. This makes it easy for customers to create templates knowing that they will print and display well. In the future we want to add functionality to edit this margin, but for now if you need the margin removed, get in touch with the support team who will happily sort it manually.
+
 ## Generating PDFs
 
 Once you've set up your template and added fields, you can generate a PDF submission by filling out the [web form](../web-forms/), or [making an API request](../../api/generate-a-pdf).
+
+A concierge service is available wherein you can hire DocSpring staff at an hourly rate to convert your static PDF templates into HTML / CSS templates.

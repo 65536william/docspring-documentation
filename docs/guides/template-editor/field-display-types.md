@@ -40,7 +40,7 @@ DocSpring will display the lines that divide each cell, and these lines can be u
 
 ## Check
 
-You can configure the check's character, color, and opacity.
+You can configure the check's character, color, and opacity. In some cases, the size and display characteristics of the checkbox are controlled by your PDF viewer.
 
 ![Check Options](./check-options.png)
 
