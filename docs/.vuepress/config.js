@@ -6,7 +6,7 @@ module.exports = {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap",
+          "https://fonts.googleapis.com/css2?family=Epilogue:wght@700&display=swap",
       },
     ],
   ],
@@ -102,6 +102,7 @@ module.exports = {
             "/guides/template-editor/settings",
             "/guides/template-editor/keyboard-shortcuts",
             "/guides/template-editor/locked-templates",
+            "/guides/template-editor/right-to-left",
           ],
         },
         {
@@ -132,7 +133,20 @@ module.exports = {
         },
       ],
 
-      "/": [""],
+      "/": [
+        {
+          title: "API Reference",
+          path: "/api/",
+        },
+        {
+          title: "Guides",
+          path: "/guides/",
+        },
+        {
+          title: "Contact us",
+          path: "https://docspring.com/contact",
+        },
+      ],
     },
   },
 };

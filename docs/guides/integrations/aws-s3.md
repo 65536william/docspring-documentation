@@ -69,11 +69,11 @@ You can also configure different paths for live and test submissions.
 - Select the correct AWS Region from the dropdown list
 - Enter your S3 bucket name
 - Configure the "Path Template for Submissions"
-  - Example: `{{ template_id }}/{{ submission_id }}.pdf` will upload your PDF to: `tpl_eGc5CmFbPnCCmerqsx/sub_Gbxesk7Xf52Pq3KgT9.pdf`
+  - Example: `template_id / submission_id .pdf` will upload your PDF to: `tpl_eGc5CmFbPnCCmerqsx/sub_Gbxesk7Xf52Pq3KgT9.pdf`
   - This path template uses the [Liquid](https://shopify.github.io/liquid/) syntax, which is similar to Handlebars or Mustache templates.
   - You can use any values from the `metadata` object.
-    - Access values with `{{ metadata.<key> }}`
-    - For example, to use the `user_id` from your metadata: `{{ metadata.user_id }}`
+    - Access values with `metadata.key`
+    - For example, to use the `user_id` from your metadata: `metadata.user_id`
     - All invalid characters are replaced with an underscore.
       - Valid characters are: `0-9`, `a-z`, `A-Z`, `!-\_.\*'()` ([See the AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines-safe-characters).)
   - Available variables:
@@ -86,13 +86,13 @@ You can also configure different paths for live and test submissions.
     - `date` - Example: `20180509`
     - `year` - Example: `2018`
     - `month` _(Not zero-padded)_ - Example: `5`
-    - `day` _(Not zero-padded)_ - Example: `9` -->
+    - `day` _(Not zero-padded)_ - Example: `9`
 - Configure the "Path Template for Combined PDFs"
   - Leave this blank if you will not be [combining any PDFs](../../api/combine-pdfs)
-  - Example: `merged_pdfs/{{ combined_submission_id }}.pdf` will upload your PDF to: `merged_pdfs/com_Zbetd3ayK4EK3J4Hf4.pdf`
+  - Example: `merged_pdfs/ combined_submission_id .pdf` will upload your PDF to: `merged_pdfs/com_Zbetd3ayK4EK3J4Hf4.pdf`
   - You can use any values from the `metadata` object.
-    - Access values with `{{ metadata.<key> }}`
-    - For example, to use the `user_id` from your metadata: `{{ metadata.user_id }}`
+    - Access values with `metadata.key`
+    - For example, to use the `user_id` from your metadata: `metadata.user_id`
     - All invalid characters are replaced with an underscore.
       - Valid characters are: `0-9`, `a-z`, `A-Z`, `!-\_.\*'()` ([See the AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-key-guidelines-safe-characters).)
   - Available variables:
